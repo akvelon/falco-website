@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  falco:
+    container_name: falco
+    image: peaceiris/hugo:v0.101.0
+    ports:
+      - 1313:1313
+    volumes:
+      - ${PWD}:/src
+    command:
+      - server
+      - --bind=0.0.0.0
+      - --buildDrafts
+  
+  strapi:
+    image: strapi/strapi
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - 1337:1337
+ 
