@@ -3,16 +3,22 @@
 
 
 <section id="td-cover-block-0"
-    class="row td-cover-block td-cover-block--height-auto js-td-cover td-overlay td-overlay--primary -bg-primary">
+    class="row td-cover-block td-cover-block--height-auto js-td-cover td-overlay td-overlay--primary">
     <div class="container td-overlay__inner">
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <h1 class="display-1 mt-0 mt-md-5 pb-4">The Falco Project</h1>
+                    <h1 class="display-1 mt-0 mt-md-5 pb-4" id="main-header">The <span class="info-header">Falco</span> Project
+                      Cloud-Native Runtime <span class="info-header">Security</span></h1>
 
-                    <div class="pt-3 lead">
+                    <div class="pt-3 lead additional-header-container">
                         {{ T "cloud-native-runtime-security" | markdownify }}
                     </div>
+
+                    <div class="pt-5">
+                      <a href="#" class="btn-header">Try Falco</a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -52,6 +58,7 @@
         </div>
     </div>
 </section>
+
 {{ with .Content }}
 {{ . }}
 {{ end }}
@@ -74,6 +81,53 @@
 </section>
 
 
-
+<div class="slider-wrapper pb-5">
+  <h3 class="display-1 mt-0 mt-md-3 pb-3 pl-5">
+    Companies who trust us
+  </h3>
+  <div class="swiper-container">
+    <div class="swiper-button-prev-custom">
+      <img src="/img/btns/prev.png" alt="previous button">
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_1.png" alt="Quote Logo" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_2.png" alt="Quote Logo" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_3.png" alt="Quote Logo" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_4.png" alt="Quote Logo" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_5.png" alt="Quote Logo" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="single-slide">
+            <img src="/img/slides/slide_6.png" alt="Quote Logo" />
+          </div>
+        </div>
+      </div>
+      <div id="swiper-pagination-id" class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next-custom">
+      <img src="/img/btns/next.png" alt="next button">
+    </div>
+  </div>
+</div>
 
 {{ end }}
