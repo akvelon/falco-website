@@ -19,7 +19,7 @@ version_banner_warning:
 latest_version:
   other: "latest version"
 cloud-native-runtime-security:
-  other: Cloud-Native Runtime Security
+  other: Falco, the cloud-native runtime security project, is the de facto Kubernetes threat detection engine.
 home_falco_description:
   other: |
     <b>Falco</b>, the cloud-native runtime security project, is the de facto <b>Kubernetes threat detection engine</b><br /><br />
