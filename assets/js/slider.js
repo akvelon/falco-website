@@ -9,11 +9,19 @@ const swiper = new Swiper('.swiper', {
     bulletActiveClass: "bullet-active-class-custom",
   },
   breakpoints: {
-    // switches from mobile to desktop when window width is > 1024px
-    1025: {
+    1200: {
       slidesPerView: 4,
       slidesPerGroup: 4,
     },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    640: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    }
+
   },
   navigation: {
     nextEl: ".swiper-button-next-custom",
