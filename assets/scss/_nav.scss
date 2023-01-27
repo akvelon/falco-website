@@ -27,8 +27,15 @@
     opacity: inherit;
 }
 
+.ml-md-auto {
+    margin-right: auto !important;
+}
+
+.navbar {
+    padding: 1rem 3rem
+}
+
 .td-navbar {
-    background: $primary;
     min-height: 4rem;
     margin: 0;
     z-index: 32;
@@ -64,6 +71,10 @@
                 height: 100%;
                 width: 120px;
 
+                path {
+                    fill: $black !important;
+                }
+
                 @include media-breakpoint-down(md) {
                     width: 120px;
                     padding: 0px;
@@ -81,7 +92,6 @@
 
     .nav-link {
         text-transform: none;
-        font-weight: $font-weight-bold;
     }
 
     .td-search-input {
