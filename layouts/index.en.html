@@ -8,15 +8,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <h1 class="display-1 mt-0 mt-md-5 pb-4" id="main-header">The <span class="info-header">Falco</span> Project
-                      Cloud-Native Runtime <span class="info-header">Security</span></h1>
-
+                  <h1 class="display-1 mt-0 mt-md-5 pb-4 pl-5 pr-5" id="main-header"><span class="info-header">Detect</span> and respond
+                    to threats </br><span class="info-header">in real time</span></h1>
                     <div class="pt-3 lead additional-header-container">
                         {{ T "cloud-native-runtime-security" | markdownify }}
                     </div>
 
                     <div class="pt-5">
-                      <a href="#" class="btn-header">Try Falco</a>
+                      <a href="#" class="button-primary">
+                        {{ T "home_falco_primary_btn" | markdownify }}
+                      </a>
                     </div>
 
                 </div>
@@ -24,6 +25,33 @@
         </div>
     </div>
 </section>
+
+
+<section class="how-it-works-container position-relative">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div>
+        <img class="eclipse" src="/img/eclipse.png" alt="eclipse">
+      </div>
+      <div class="col-md-7 col-sm-12 text-left">
+        <div class="pt-5">
+          <a href="#" class="tag tag--dark">
+            {{ T "how_it_works_btn" | markdownify }}
+          </a>
+        </div>
+        <h3 class="display-7 text-white">Get started in 2 easy steps:<br>
+          choose your driver and run Falco.</h3>
+        <div class="pt-3 text-white">
+          {{ T "cloud-native-runtime-security-kubernetes" | markdownify }}
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-12">
+        <img class="plug" src="/img/plug.png" alt="plug">
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section id="desc" class="row relative td-box--gradient td-box--height-auto">
     <div class="container">
@@ -67,7 +95,7 @@
     <div class="container td-arrow-down">
         <div class="row">
             <div class="col text-center">
-                <h3 class="display-1 mt-0 mt-md-3 pb-3">{{ T "home_featured_videos" }} </h3>
+                <h3 class="display-1 mt-0 mt-md-3 pb-3">{{ T "home_featured_videos" }}</h3>
                 {{ partial "videos.html" .}}
             </div>
         </div>
