@@ -1,0 +1,20 @@
+{{ $links := site.Data.en.community }}
+<div class="container">
+  <div class="row">
+    {{ range $links }}
+      <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+        <div class="card text-center card-rounded card-rounded--shaded community-card" >
+          <div class="card-body">
+            <img class="community-card__icon" src={{ .icon }}/>
+            <div class="card-title mt-3 mb-0">
+              {{ .title }}
+            </div>
+            <div class="card-text">
+              {{ .details }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

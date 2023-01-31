@@ -101,6 +101,7 @@ section#cncf {
 
 .tag {
     $base: 1.5rem;
+	width: fit-content;
     
     background-color: $cyan-1;
     color: $black;
@@ -110,5 +111,18 @@ section#cncf {
     &--dark {
         background-color: $cyan-9;
         color: $white
+    }
+}
+
+.card.card-rounded {
+    border-radius: 2.5rem;
+	max-width: 100%;
+
+    &--sm {
+        border-radius: 1.25rem;
+    }
+
+    &--shaded {
+        box-shadow: 0px 4px 20px rgba($black, 0.1);
     }
 }

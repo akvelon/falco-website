@@ -1,0 +1,28 @@
+- name: CNCF
+  icon: /icons/cncf.svg
+  title: Falco is proud to be part of the CNCF
+  details: dtl
+- name: Docker
+  icon: /icons/docker64.svg
+  title: Download on Dockerhub
+  details: 50M Downloads
+- name: GitHub
+  icon: /icons/github.svg
+  title: Star us on GitHub
+  details: 5.6K
+- name: Slack
+  icon: /icons/slack.svg
+  title: Join our Slack
+  details: 12M Followers
+- name: YouTube
+  icon: /icons/youtube.svg
+  title: Watch us on YouTube
+  details: 50M Followers
+- name: StackOverflow
+  icon: /icons/stackoverflow.svg
+  title: Ask questions on StackOverflow
+  details:
+# - name: Email
+#   icon:
+#   title: Write an email
+#   details:

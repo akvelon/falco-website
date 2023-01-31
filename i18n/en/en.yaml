@@ -38,3 +38,7 @@ home_falco_intro_cncf:
   other: Falco is the first runtime security project to join CNCF as an incubation-level project.
 home_falco_intro_camera:
   other: Falco acts as a security camera detecting unexpected behavior, intrusions, and data theft in real time.
+home_falco_community_tag:
+  other: Community
+home_falco_community:
+  other: Follow us to stay in touch
