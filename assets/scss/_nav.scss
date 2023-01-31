@@ -268,43 +268,19 @@ nav.foldable-nav {
     }
 }
 
-.how-it-works-wrapper {
+.how-it-works-container {
     background-color: #244245;
     background-image: url(/img/how_it_works_background.png);
     background-repeat: repeat;
-    position: relative;
-
-    img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        height: 100%;
-    }
 }
 
-.negative-m-l {
-    margin-left: -15px;
+.eclipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
 }
 
-.negative-m-r {
-    margin-right: -15px;
-}
-
-.btn-dark-rounded {
-    background-color: #18535B;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 24px;
-    padding: 12px 42px;
-}
-
-.btn-info-rounded {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #121212;
-    border-radius: 24px;
-    padding: 12px 42px;
-}
-
-* {
-    outline: 1px solid red;
+.plug {
+    width: 100%;
 }

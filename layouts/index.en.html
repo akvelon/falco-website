@@ -15,7 +15,9 @@
                     </div>
 
                     <div class="pt-5">
-                      <a href="#" class="btn-header">Try Falco</a>
+                      <a href="#" class="button-primary">
+                        {{ T "home_falco_primary_btn" | markdownify }}
+                      </a>
                     </div>
 
                 </div>
@@ -25,31 +27,30 @@
 </section>
 
 
-<section class="how-it-works-wrapper">
+<section class="how-it-works-container position-relative">
   <div class="container text-center">
-  <img src="/img/eclipse.png" alt="eclipse">
-  <div class="row">
-    <div class="col-7 pl-5">
-      <div class="pt-5">
-        <a href="#" class="btn-dark-rounded">More features</a>
+    <div class="row align-items-center">
+      <div>
+        <img class="eclipse" src="/img/eclipse.png" alt="eclipse">
       </div>
-      <h3 class="display-2 text-white">Detects threats at runtime by observing the behavior of your applications and containers.</h3>
-      <div class="pt-3 text-white">
-        {{ T "cloud-native-runtime-security-kubernetes" | markdownify }}
-      </div>
-    </div>
-    <div class="col-5">
-      <div class="btns">
+      <div class="col-md-7 col-sm-12 text-left">
         <div class="pt-5">
-          <a href="#" class="btn-info-rounded">More features</a>
+          <a href="#" class="tag tag--dark">
+            {{ T "how_it_works_btn" | markdownify }}
+          </a>
+        </div>
+        <h3 class="display-7 text-white">Get started in 2 easy steps:<br>
+          choose your driver and run Falco.</h3>
+        <div class="pt-3 text-white">
+          {{ T "cloud-native-runtime-security-kubernetes" | markdownify }}
         </div>
       </div>
-      <div class="imgs">2</div>
+      <div class="col-md-5 col-sm-12">
+        <img class="plug" src="/img/plug.png" alt="plug">
+      </div>
     </div>
   </div>
-  </div>
 </section>
-
 
 
 <section id="desc" class="row relative td-box--gradient td-box--height-auto">
