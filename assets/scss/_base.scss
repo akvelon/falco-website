@@ -1,3 +1,5 @@
+@import "variables";
+
 body.td-home {
     background-color: #F5F5F5;
 }
@@ -97,4 +99,16 @@ section#cncf {
     padding: 12px 42px;
 }
 
+.tag {
+    $base: 1.5rem;
+    
+    background-color: $cyan-1;
+    color: $black;
+    padding: $base / 2 $base;
+    border-radius: 50vh; 
 
+    &--dark {
+        background-color: $cyan-9;
+        color: $white
+    }
+}
