@@ -86,13 +86,13 @@ section#cncf {
 }
 
 .additional-header-container {
-    width: 50%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .btn-header {
-    background-color: #00AEC7;
+    background-color: $primary;
     color: #FFFFFF;
     border: none;
     border-radius: 8px;
@@ -101,11 +101,11 @@ section#cncf {
 
 .tag {
     $base: 1.5rem;
-    
+
     background-color: $cyan-1;
     color: $black;
     padding: $base / 2 $base;
-    border-radius: 50vh; 
+    border-radius: 50vh;
 
     &--dark {
         background-color: $cyan-9;

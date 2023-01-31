@@ -8,9 +8,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <h1 class="display-1 mt-0 mt-md-5 pb-4" id="main-header">The <span class="info-header">Falco</span> Project
-                      Cloud-Native Runtime <span class="info-header">Security</span></h1>
-
+                  <h1 class="display-1 mt-0 mt-md-5 pb-4 pl-5 pr-5" id="main-header"><span class="info-header">Detect</span> and respond
+                    to threats </br><span class="info-header">in real time</span></h1>
                     <div class="pt-3 lead additional-header-container">
                         {{ T "cloud-native-runtime-security" | markdownify }}
                     </div>
@@ -24,6 +23,34 @@
         </div>
     </div>
 </section>
+
+
+<section class="how-it-works-wrapper">
+  <div class="container text-center">
+  <img src="/img/eclipse.png" alt="eclipse">
+  <div class="row">
+    <div class="col-7 pl-5">
+      <div class="pt-5">
+        <a href="#" class="btn-dark-rounded">More features</a>
+      </div>
+      <h3 class="display-2 text-white">Detects threats at runtime by observing the behavior of your applications and containers.</h3>
+      <div class="pt-3 text-white">
+        {{ T "cloud-native-runtime-security-kubernetes" | markdownify }}
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="btns">
+        <div class="pt-5">
+          <a href="#" class="btn-info-rounded">More features</a>
+        </div>
+      </div>
+      <div class="imgs">2</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
 
 <section id="desc" class="row relative td-box--gradient td-box--height-auto">
     <div class="container">
@@ -67,7 +94,7 @@
     <div class="container td-arrow-down">
         <div class="row">
             <div class="col text-center">
-                <h3 class="display-1 mt-0 mt-md-3 pb-3">{{ T "home_featured_videos" }} </h3>
+                <h3 class="display-1 mt-0 mt-md-3 pb-3">{{ T "home_featured_videos" }}</h3>
                 {{ partial "videos.html" .}}
             </div>
         </div>
