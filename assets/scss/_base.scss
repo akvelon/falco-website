@@ -132,16 +132,11 @@ section#cncf {
         flex: 0 0 20% !important;
         max-width: 20% !important;
     }
+}
 
-    .px-4-5 {
-        padding-left: 3rem !important;
-        padding-right: 3rem !important;
-
-
-        &:nth-child(5n + 1) {
-            padding-left: 0 !important;
-        }
-    }
+.mx-negative {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
 }
 
 .card.card-rounded {

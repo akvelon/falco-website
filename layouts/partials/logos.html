@@ -1,16 +1,13 @@
 {{ $adopters := $.Site.Params.adopters }}
-{{ $endUsers := index $adopters "end-users" }}
-{{ $vendors := index $adopters "vendors" }}
-{{ $integrations := index $adopters "integrations" }}
 {{ $usedBy := index $adopters "used-by" }}
 
 <section class="row relative td-box--gradient td-box--height-auto">
     <div class="container text-center">
         <h3 class="display-2 mt-0 mt-md-3 mb-4 pb-3 text-left">{{ T "home_falco_is_used_by" }}</h3>
         <br />
-        <div class="row h-30 mx-0">
+        <div class="row h-30 mx-negative">
             {{- range $usedBy }}
-            <div class="col-xs-12 col-sm-6 col-md-3 col-l-2-5 pb-3 my-auto px-4-5">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-l-2-5 pb-3 px-4 my-auto">
             <figure>
                 <a href="{{ .url }}">
                 <img class="img-fluid mb-4 grey-scale" src="{{ printf "/img/adopters/%s" .src | relURL }}"
