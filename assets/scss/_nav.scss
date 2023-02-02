@@ -106,7 +106,16 @@
 
     .dropdown {
         min-width: 100px;
+        .dropdown-toggle {
+            &::after {
+                border: none !important;
+            }
+        }
+        svg {
+            margin-bottom: 0.125rem;
+        }
     }
+    
 
     @include media-breakpoint-down(md) {
         padding-right: .5rem;
