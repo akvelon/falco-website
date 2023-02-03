@@ -147,9 +147,9 @@ section#cncf {
 
 .tag {
     $base: 1.5rem;
-	width: fit-content;
-    
-
+	
+    display: block;
+    width: fit-content;
     background-color: $cyan-1;
     color: $black;
     padding: $base / 2 $base;
