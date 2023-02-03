@@ -52,12 +52,25 @@
   </div>
 </section>
 
+<section class="row relative position-relative">
+  <div class="container td-arrow-down">
+      <div class="row">
+          <div class="col-12 col-md-5">
+              <a href="/" class="tag">{{ T "home_falco_features_tag" | markdownify}}</a>
+              <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">{{ T "home_falco_features" }} </h3>
+          </div>
+          <div class="col-12 col-md-7">
+              {{ partial "features.html" . }}
+          </div>
+      </div>
+  </div>
+</section>
 
 <section class="row relative position-relative">
   <div class="container td-arrow-down">
       <div class="row">
           <div class="col">
-              <p class="tag" >{{ T "home_falco_community_tag" | markdownify}}</p>
+              <a href="/community/" class="tag">{{ T "home_falco_community_tag" | markdownify}}</a>
               <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">{{ T "home_falco_community" }} </h3>
               {{ partial "community.html" . }}
           </div>

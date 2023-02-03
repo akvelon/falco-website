@@ -1,21 +1,64 @@
 .community-card {
   height: 12.5rem;
 
-  .card-body {
-    padding: 36px;
-  }
-
   .card-title {
     font-weight: 600;
   }
 
   .card-text {
-    font-size: 12px;
+    font-size: 0.75rem;
     opacity: 0.5;
   }
 
   &__icon {
-    height: 64px;
-    width: 64px;
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.feature-card {
+  background-color: $gray-2;
+
+  &-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  &-btn-expand {
+    color: $primary;
+    padding: 0;
+
+    &:hover {
+      color: rgba($primary, 0.6);
+    }
+    &:focus,
+    :active {
+      box-shadow: none !important;
+    }
+
+    &[aria-expanded=false] {
+      .expanded {
+        display: none;
+      }
+    }
+
+    &[aria-expanded=true] {
+      .collapsed {
+        display: none;
+      }
+    }
+  }
+
+  .card-body {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__icon {
+    padding: 1rem;
+    border-radius: 50vh;
+    background-color: $white;
+    align-self: flex-start;
   }
 }

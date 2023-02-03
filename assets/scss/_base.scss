@@ -1,7 +1,7 @@
 @import "variables";
 
 body.td-home {
-    background-color: #F5F5F5;
+    background-color: #FAFAFA;
 }
 
 section#cncf {
@@ -172,6 +172,10 @@ section#cncf {
     border-radius: 2.5rem;
 	max-width: 100%;
 	border: none;
+
+    .card-body {
+        padding: 2.5rem;
+    }
 
     &--sm {
         border-radius: 1.25rem;
