@@ -1,0 +1,37 @@
+<section class="feature-card-wrapper p-0" id="falco-features-container">
+  {{ range $index, $features := site.Data.en.features }}
+    <div class="card card-rounded feature-card">
+      <div class="card-body">
+        <div class="feature-card__icon">
+          <img src="{{ .icon }}" />
+        </div>
+        <div>
+          <h3 class="display-3 mt-0 pb-1">{{ .title }}</h3>
+          <div class="mb-2 pb-1">{{ .description }}</div>
+
+          <ul
+            id="falco-features-{{ $index }}"
+            class="collapse ml-3 pl-1 mb-2"
+            aria-labelledby="falco-features-{{ $index }}"
+            data-parent="#falco-features-container"
+          >
+            {{ range .features }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+
+          <button
+            data-toggle="collapse"
+            data-target="#falco-features-{{ $index }}"
+            class="btn btn-link feature-card-btn-expand"
+            aria-expanded="false"
+            aria-controls="falco-features-{{ $index }}"
+          >
+            <span class="collapsed">{{ T "home_show_more" }}</span>
+            <span class="expanded">{{ T "home_show_less" }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</section>
