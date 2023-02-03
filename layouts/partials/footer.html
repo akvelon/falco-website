@@ -1,28 +1,26 @@
 {{ $links := .Site.Params.links }}
-<footer class="bg-dark py-5 row d-print-none">
+<footer class="footer--dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
-    <div class="row">
-      <div class="col-6 col-sm-2 text-xs-center order-sm-2">
-        {{ with $links }}
-        {{ with index . "user"}}
-        {{ template "footer-links-block"  . }}
-        {{ end }}
-        {{ end }}
+    <div class="column">
+      <div class="row justify-content-between">
+        <div class="col-6">
+          {{ with $links }}
+          {{ with index . "developer"}}
+          {{ template "footer-links-block"  . }}
+          {{ end }}
+          {{ end }}
+        </div>
+        <div class="col-6 text-right">
+          <a class="pl-3-5 text-white" href="#">About</a>
+          <a class="pl-3-5 text-white" href="#">Docs</a>
+          <a class="pl-3-5 text-white" href="#">Trainig</a>
+          <a class="pl-3-5 text-white" href="#">Community</a>
+          <a class="pl-3-5 text-white" href="#">Blog</a>
+        </div>
       </div>
-      <div class="col-6 col-sm-2 text-right text-xs-center order-sm-3">
-        {{ with $links }}
-        {{ with index . "developer"}}
-        {{ template "footer-links-block"  . }}
-        {{ end }}
-        {{ end }}
-      </div>
-      <div class="col-12 col-sm-8 text-center py-2 order-sm-2">
+      <div class="col-12 col-sm-8 py-2 order-sm-2">
         {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} {{ .}}
           | {{ T "documentation_copyright_notice" }} </small>{{ end }}
-        <br />
-        {{ with .Site.Params.copyright_linux }}<small class="text-white">&copy; {{ now.Year}} {{ .}}
-          {{ T "footer_all_rights_reserved" }} <br /> {{ T "main_copyright_notice" | safeHTML }}</small>{{ end }}
-        <br />
         {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}"
             target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
         {{ if not .Site.Params.ui.footer_about_disable }}
