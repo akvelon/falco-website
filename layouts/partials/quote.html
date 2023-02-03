@@ -1,0 +1,21 @@
+<div class="card card-rounded card-rounded--shaded h-100">
+  <div class="card-body d-flex flex-column justify-content-between">
+    <div class="slide-img-container">
+      <img src="{{ .logoUrl }}" alt="Quote Logo" />
+    </div>
+    <p class="card-text mb-0 pt-4 col">"{{ .text | markdownify }}"</p>
+    <div class="quote-author d-flex pt-4-5">
+      <div class="quote-author-img">
+        <img class="rounded" src="{{ .authorImgUrl }}" alt="author image">
+      </div>
+      <div class="pl-2-5 d-flex flex-column justify-content-center">
+        <div>
+          {{ .authorName }}
+        </div>
+        <div class="quote-author-position">
+          {{ .authorPosition }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

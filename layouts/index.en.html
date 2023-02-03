@@ -69,6 +69,30 @@
   </div>
 </section>
 
+<section class="pb-0">
+  <div class="container slider-wrapper pb-5">
+    <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">
+      Companies who trust us
+    </h3>
+    <div class="d-flex justify-content-center align-items-center">
+      <img class="d-block swiper-button-prev-custom" src="/img/btns/prev.png" alt="previous button">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {{ $data := index $.Site.Data .Site.Language.Lang }}
+          {{ range $quote := $data.quotes }}
+          <div class="swiper-slide">
+            {{ partial "quote.html" (dict "text" $quote.text  "logoUrl" $quote.logoUrl "authorImgUrl" $quote.authorImgUrl "authorName" $quote.authorName "authorPosition" $quote.authorPosition) }}
+          </div>
+          {{ end }}
+        </div>
+        <div class="swiper-pagination position-static"></div>
+      </div>
+      <img class="d-block swiper-button-next-custom" src="/img/btns/next.png" alt="next button">
+    </div>
+  </div>
+</section>
+
+
 <section class="row relative position-relative">
   <div class="container td-arrow-down">
       <div class="row">
@@ -138,54 +162,5 @@
     <p>{{ T "cncf_status_statement" | markdownify }}</p>
 </section>
 
-
-<div class="slider-wrapper pb-5">
-  <h3 class="display-1 mt-0 mt-md-3 pb-3 pl-5">
-    Companies who trust us
-  </h3>
-  <div class="swiper-container">
-    <div class="swiper-button-prev-custom">
-      <img src="/img/btns/prev.png" alt="previous button">
-    </div>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_1.png" alt="Quote Logo" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_2.png" alt="Quote Logo" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_3.png" alt="Quote Logo" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_4.png" alt="Quote Logo" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_5.png" alt="Quote Logo" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="single-slide">
-            <img src="/img/slides/slide_6.png" alt="Quote Logo" />
-          </div>
-        </div>
-      </div>
-      <div id="swiper-pagination-id" class="swiper-pagination"></div>
-    </div>
-    <div class="swiper-button-next-custom">
-      <img src="/img/btns/next.png" alt="next button">
-    </div>
-  </div>
-</div>
 
 {{ end }}

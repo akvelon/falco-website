@@ -34,7 +34,9 @@ $gray-100: #f8f9fa !default;
 $gray-200: #eee !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ccc !default;
+$gray-450: #BABABA !default;
 $gray-500: #adb5bd !default;
+$gray-550: #8a8a8a !default;
 $gray-600: #797676 !default;
 $gray-700: #495057 !default;
 $gray-800: #333 !default;
@@ -135,3 +137,6 @@ $navbar-dark-disabled-color: rgba($black, 0.25) !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 $yiq-contrasted-threshold: 200 !default;
+
+// Btn colors
+$btn-active: #03B4C8 !default;
