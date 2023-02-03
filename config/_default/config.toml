@@ -119,12 +119,16 @@ id = "UA-40398182-19"
 # Additional menu items
 
 [[menu.main]]
-    name = "Documentation"
+    name = "About"
+    weight = 30
+    url = "/about/"
+[[menu.main]]
+    name = "Docs"
     weight = 40
     url = "/docs/"
 [[menu.main]]
     name = "Blog"
-    weight = 50
+    weight = 70
     url = "/blog/"
 [[menu.main]]
     name = "Community"
@@ -132,7 +136,7 @@ id = "UA-40398182-19"
     url = "/community/"
 [[menu.main]]
     name = "Training"
-    weight = 70
+    weight = 50
     url = "/training/"
 
 # Specify a value here if your content directory is not in your repo's root directory
