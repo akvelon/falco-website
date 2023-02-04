@@ -140,3 +140,10 @@ $yiq-contrasted-threshold: 200 !default;
 
 // Btn colors
 $btn-active: #03B4C8 !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px
+) !default;
