@@ -1,8 +1,7 @@
 {{ $links := site.Data.en.community }}
 <div class="container">
-  <div class="row">
+  <div class="grid-md-3 grid-lg-4 grid-1 grid-sm-2 gap-4">
     {{ range $links }}
-      <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
         <div class="card text-center card-rounded card-rounded--shaded community-card" >
           <div class="card-body">
             <a class="text-body" href="{{ .url }}">
@@ -16,7 +15,6 @@
             </a>
           </div>
         </div>
-      </div>
     {{ end }}
   </div>
 </div>
