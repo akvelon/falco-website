@@ -7,9 +7,9 @@ See https://github.com/twbs/bootstrap/pull/23260
 @fa-font-path :        "../webfonts";
 
 // Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
-$enable-gradients: true !default;
+$enable-gradients: false !default;
 $enable-rounded: true !default;
-$enable-shadows: true !default;
+$enable-shadows: false !default;
 
 // Theme flags.
 
@@ -49,6 +49,21 @@ $cyan-9: #18535B !default;
 $gray-2: #f4f4f4 !default;
 
 $code-color: darken($secondary, 20%) !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $cyan-9
+  ),
+  $theme-colors
+);
 
 // UI element colors
 
@@ -137,9 +152,6 @@ $navbar-dark-disabled-color: rgba($black, 0.25) !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 $yiq-contrasted-threshold: 200 !default;
-
-// Btn colors
-$btn-active: #03B4C8 !default;
 
 $container-max-widths: (
   sm: 540px,

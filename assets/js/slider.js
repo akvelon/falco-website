@@ -3,10 +3,10 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper__pagination",
     clickable: true,
-    bulletClass: "bullet-class-custom",
-    bulletActiveClass: "bullet-active-class-custom",
+    bulletClass: "swiper__bullet",
+    bulletActiveClass: "swiper__bullet--active",
   },
   breakpoints: {
     1024: {
@@ -20,7 +20,8 @@ const swiper = new Swiper('.swiper', {
 
   },
   navigation: {
-    nextEl: ".swiper-button-next-custom",
-    prevEl: ".swiper-button-prev-custom",
+    nextEl: ".swiper__control-reverse",
+    prevEl: ".swiper__control",
+    disabledClass: "swiper__control--disabled"
   }
 });

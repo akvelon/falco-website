@@ -13,11 +13,11 @@ main_copyright_notice:
 cncf_status_statement:
   other: We are a <a href="https://cncf.io/">CNCF</a> incubated Project
 version_banner_title:
-  other: "You are viewing documentation for Falco version:"
+  other: 'You are viewing documentation for Falco version:'
 version_banner_warning:
-  other: " documentation is no longer actively maintained. The version you are currently viewing is a static snapshot. For up-to-date documentation, see the "
+  other: ' documentation is no longer actively maintained. The version you are currently viewing is a static snapshot. For up-to-date documentation, see the '
 latest_version:
-  other: "latest version"
+  other: 'latest version'
 cloud-native-runtime-security:
   other: Falco is the open source standard for risk and threat detection for containers, Kubernetes and the cloud. Get visibility into unexpected behaviors, config changes, intrusions, and data theft in real time.
 cloud-native-runtime-security-kubernetes:
@@ -60,3 +60,13 @@ home_show_more:
   other: Show more
 home_show_less:
   other: Show less
+home_falco_what_is_falco_title:
+  other: Detect and respond to threats in real time
+home_falco_what_is_falco:
+  other: Falco is tFhe open source standard for risk and threat detection for containers, Kubernetes and the cloud. Get visibility into unexpected behaviors, config changes, intrusions, and data theft in real time.
+home_falco_get_started:
+  other: "Get started in 2 easy steps: choose your driver and run Falco."
+home_falco_testimonials_tag:
+  other: Testimonials
+homa_falco_secured_by_falco:
+  other: Secured with Falco

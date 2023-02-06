@@ -1,66 +1,29 @@
 {{ define "main" }}
 
-
-
-<section id="td-cover-block-0"
-    class="row td-cover-block td-cover-block--height-auto js-td-cover td-overlay td-overlay--primary">
-    <div class="container td-overlay__inner">
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                  <h2 class="display-1 mt-0 mt-md-5 pb-4 pl-5 pr-5" id="main-header"><span class="info-header">Detect</span> and respond</br>
-                    to threats </br>in <span class="info-header">real time</span></h2>
-                    <div class="pt-3 lead additional-header-container">
-                        {{ T "cloud-native-runtime-security" | markdownify }}
-                    </div>
-
-                    <div class="pt-5">
-                      <a href="#" class="button-primary">
-                        {{ T "home_falco_primary_btn" | markdownify }}
-                      </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="row how-it-works-container position-relative">
-  <div class="container text-center">
-    <div class="row align-items-center">
-      <div>
-        <img class="eclipse" src="/img/eclipse.png" alt="eclipse">
+<section class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <h1 class="display-1 mb-3">{{ T "home_falco_what_is_falco_title" | markdownify }}</h1>
+        <p class="mb-5">{{ T "home_falco_what_is_falco" | markdownify }}</p>
+        <p class="text-primary text-uppercase font-weight-bold mb-1">{{ T "home_falco_get_started" | markdownify }}</p>
+        <a href="#" role="button" class="btn btn-primary px-5 py-2 mt-3">
+          {{ T "home_falco_primary_btn" | markdownify }}
+        </a>
       </div>
-      <div class="col-md-7 col-sm-12 text-left">
-        <div class="pt-5">
-          <a href="#" class="tag tag--dark">
-            {{ T "how_it_works_btn" | markdownify }}
-          </a>
-        </div>
-        <h3 class="display-7 text-white">Get started in 2 easy steps:<br>
-          choose your driver and run Falco.</h3>
-        <div class="pt-3 text-white">
-          {{ T "cloud-native-runtime-security-kubernetes" | markdownify }}
-        </div>
-      </div>
-      <div class="col-md-5 col-sm-12">
-        <img class="plug" src="/img/plug.png" alt="plug">
+      <div class="col-md-6 col-12">
+        <img src="/img/svg/falco-schema.svg" alt="plug"/>
       </div>
     </div>
   </div>
 </section>
 
-<section class="row relative position-relative">
+<section class="row">
   <div class="container td-arrow-down">
       <div class="row">
           <div class="col-12 col-md-5">
               <a href="/" class="tag">{{ T "home_falco_features_tag" | markdownify}}</a>
               <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">{{ T "home_falco_features" }} </h3>
-              <a href="#" class="button-primary">
-                {{ T "home_falco_primary_btn" | markdownify }}
-              </a>
           </div>
           <div class="col-12 col-md-7">
               {{ partial "features.html" . }}
@@ -69,31 +32,31 @@
   </div>
 </section>
 
-<section class="pb-0">
-  <div class="container slider-wrapper pb-5">
-    <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">
-      Companies who trust us
+<section class="row">
+  <div class="container slider-wrapper">
+    <a class="tag">{{ T "home_falco_testimonials_tag" | markdownify}}</a>
+    <h3 class="display-2 mt-3">
+      {{ T "homa_falco_secured_by_falco" | markdownify }}
     </h3>
-    <div class="d-flex justify-content-center align-items-center">
-      <img class="d-block swiper-button-prev-custom" src="/img/btns/prev.png" alt="previous button">
+    <div class="swiper__container d-flex justify-content-center align-items-center mt-4">
+      <span class="swiper__control">{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}</span>
       <div class="swiper">
         <div class="swiper-wrapper">
           {{ $data := index $.Site.Data .Site.Language.Lang }}
           {{ range $quote := $data.quotes }}
-          <div class="swiper-slide">
+          <div class="swiper-slide px-3">
             {{ partial "quote.html" (dict "text" $quote.text  "logoUrl" $quote.logoUrl "authorImgUrl" $quote.authorImgUrl "authorName" $quote.authorName "authorPosition" $quote.authorPosition) }}
           </div>
           {{ end }}
         </div>
-        <div class="swiper-pagination position-static"></div>
+        <div class="swiper__pagination d-flex justify-content-center mt-4"></div>
       </div>
-      <img class="d-block swiper-button-next-custom" src="/img/btns/next.png" alt="next button">
+      <span class="swiper__control-reverse">{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}</span>
     </div>
   </div>
 </section>
 
-
-<section class="row relative position-relative">
+<section class="row">
   <div class="container td-arrow-down">
       <div class="row">
           <div class="col">
@@ -105,8 +68,11 @@
   </div>
 </section>
 
+<section id="cncf">
+  <p>{{ T "cncf_status_statement" | markdownify }}</p>
+</section>
 
-<section id="desc" class="row relative td-box--gradient td-box--height-auto">
+<!-- <section id="desc" class="row relative td-box--gradient td-box--height-auto">
     <div class="container">
         <div class="row justify-content-center mb-4">
             <div class="col-md-6 align-self-center h4">
@@ -138,13 +104,13 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-{{ with .Content }}
+<!-- {{ with .Content }}
 {{ . }}
-{{ end }}
+{{ end }} -->
 
-<section class="row relative td-box--gradient position-relative td-box--1 td-box--height-auto">
+<!-- <section class="row relative td-box--gradient position-relative td-box--1 td-box--height-auto">
     <div class="container td-arrow-down">
         <div class="row">
             <div class="col text-center">
@@ -153,14 +119,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 {{ partial "logos.html" . }}
 
-<section id="cncf">
+<!-- <section id="cncf">
     <p>{{ T "cncf_status_statement" | markdownify }}</p>
-</section>
+</section> -->
 
 
 {{ end }}
