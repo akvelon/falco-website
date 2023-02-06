@@ -5,12 +5,12 @@
     <div class="container text-center">
         <h3 class="display-2 mt-0 mt-md-3 mb-4 pb-3 text-left">{{ T "home_falco_is_used_by" }}</h3>
         <br />
-        <div class="row h-30">
+        <div class="grid-lg-5 grid-md-4 grid-sm-3 grid-2 gap-5">
             {{- range $usedBy }}
-            <div class="col-xs-12 col-sm-6 col-md-3 col-l-2-5 pb-3 px-4 my-auto">
+            <div class=" my-auto">
             <figure>
                 <a href="{{ .url }}">
-                <img class="img-fluid mb-4 grey-scale" src="{{ printf "/img/adopters/%s" .src | relURL }}"
+                <img class="img-fluid grey-scale" src="{{ printf "/img/adopters/%s" .src | relURL }}"
                     alt="{{ .alt }}">
                 </a>
             </figure>
