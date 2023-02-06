@@ -278,6 +278,32 @@ enable = false
 	icon = "fa fa-star"
         desc = "View the contributors of the month"
 
+[[params.links.footer]]
+	name = "GitHub"
+	url = "https://github.com/falcosecurity/falco"
+	icon = "fab fa-github"
+        desc = "Development takes place here!"
+[[params.links.footer]]
+	name = "Slack"
+	url = "https://kubernetes.slack.com/messages/falco"
+	icon = "fab fa-slack"
+        desc = "Chat with other project developers"
+[[params.links.footer]]
+	name = "Stack Overflow"
+	url = "https://stackoverflow.com/questions/tagged/falco"
+	icon = "fab fa-stack-overflow"
+        desc = "Practical questions and curated answers"
+[[params.links.footer]]
+	name ="Twitter"
+	url = "https://twitter.com/falco_org"
+	icon = "fab fa-twitter"
+        desc = "Follow us on Twitter to get the latest news!"
+[[params.links.footer]]
+	name = "Developer mailing list"
+	url = "https://lists.cncf.io/g/cncf-falco-dev"
+	icon = "fa fa-envelope"
+        desc = "Discuss development issues around the project"
+
 [params.mermaid]
 enable = true
 theme = "default"
