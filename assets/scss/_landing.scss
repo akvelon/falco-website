@@ -163,13 +163,9 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
 }
 
 .footer {
-  &--dark {
-    background-color: $black;
-  }
-}
+  background-color: $black;
 
-.footer-link {
-  &--dark {
+  &__link {
     background-color: $white;
   }
 }
