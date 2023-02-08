@@ -1,15 +1,14 @@
 # How to add new logo
 Please follow these steps to add your logo to [Falco landing page](https://falco.org/):
 1. Fork [Falco](https://github.com/falcosecurity/falco-website) repository
-2. Add your logo in png to
+2. Add your logo to
    the [static/img/adopters](https://github.com/falcosecurity/falco-website/tree/master/static/img/adopters)
-   folder.
-3. Add info with your logo to [params file](https://github.com/falcosecurity/falco-website/blob/master/config/_default/params.toml) after the ```#Used by Adopters``` header with template below
-
+   folder. Use png, preferably horizontal format
+3. Add file with logo name to the [logos folder](https://github.com/falcosecurity/falco-website/blob/master/data/logos)  e.g., logo.md
+4. Copy template below to the created file and replace next fields with your data
 ```
-[[adopters.used-by]]
-src = "your_logo_name.png "
-alt = "alt tag decription"
-url = "link to the project"
+- src: your_logo_name.png
+  alt: alt tag decription
+  url: https://your_url.com/
 ```
-4. Create pull request to the Falco repository with your changes
+5. Create pull request to the Falco repository with your changes
