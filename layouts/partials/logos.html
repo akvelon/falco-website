@@ -3,7 +3,7 @@
         <h3 class="display-2 mt-0 mt-md-3 mb-4 pb-3 text-left">{{ T "home_falco_is_used_by" }}</h3>
         <br />
         <div class="grid-lg-5 grid-md-4 grid-sm-3 grid-2 gap-5">
-          {{ range $.Site.Data.logos }}
+          {{ range (and ($.Site.Data.adopters.endusers) ($.Site.Data.adopters.integrations) ($.Site.Data.adopters.vendors)) }}
             {{ range . }}
               <div class=" my-auto">
                 <figure>
