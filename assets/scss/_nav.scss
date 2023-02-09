@@ -276,19 +276,53 @@ nav.foldable-nav {
     }
 }
 
-.how-it-works-container {
-    background-color: #244245;
-    background-image: url(/img/how_it_works_background.png);
-    background-repeat: repeat;
-}
-
-// .eclipse {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     height: 100%;
-// }
-
 .plug {
     width: 100%;
+}
+
+.announcement-bar {
+    $height: 1.5rem;
+
+    z-index: 9999;
+    width: 100%;
+    background-color: $black;
+    color: $primary;
+    animation: fade-out 0.5s forwards 1s;
+
+    @include media-breakpoint-up(md) {
+        position: fixed;
+        top: -$height;
+        height: $height;
+    }
+
+    &--hidden {
+        animation: fade-in 0.5s forwards;
+    }
+
+    &__button-close {
+        margin-left: 1rem;
+        > svg {
+            fill: $white;
+            height: 1.5rem;
+            width: 1.5rem
+        }
+    }
+
+    @keyframes fade-out {
+        from {
+            top: -$height;
+        }
+        to {
+            top: 0;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            top: 0;
+        }
+        to {
+            top: -$height;
+        }
+    }
 }
