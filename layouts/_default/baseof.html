@@ -20,7 +20,5 @@
     <script src="{{ $swiperSlider.RelPermalink }}"></script>
     {{ $slider := resources.Get "js/slider.js" | minify | fingerprint }}
     <script src="{{ $slider.RelPermalink }}"></script>
-    {{ $announcementBar := resources.Get "js/announcement-bar.js" | minify | fingerprint }}
-    <script src="{{ $announcementBar.RelPermalink }}"></script>
   </body>
 </html>
