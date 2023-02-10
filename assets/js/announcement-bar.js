@@ -28,23 +28,26 @@
     }
     if (index === storedIndex) show = storedShow;
 
-    const store = { index: storedIndex, show };
+    const store = { index, show };
     localStorage.setItem(STORE, JSON.stringify({ index, show }));
 
     return store;
   };
 
   const [announcementBar] = document.getElementsByClassName(CLASS_NAME);
+  const [navbar] = document.getElementsByClassName("td-navbar");
 
   const store = updateStore();
   const inDateRange = isInDateRange();
 
-  announcementBar.classList.add(
-    `${store.show && inDateRange ? "d-flex" : "d-none"}`
-  );
+  if(store.show && inDateRange){
+    announcementBar.classList.add('d-flex');
+    navbar.classList.add('td-navbar--announcement-show');
+  }
 
   return (announcementBarHide = () => {
     localStorage.setItem(STORE, JSON.stringify({ ...store, show: false }));
-    announcementBar.classList.add(`${CLASS_NAME}--hidden`);
+    announcementBar.classList.add(`${CLASS_NAME}--hide`);
+    navbar.classList.add('td-navbar--announcement-hide');
   });
 })();

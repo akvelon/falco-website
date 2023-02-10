@@ -1,3 +1,16 @@
+$announcement_height: 1.5rem;
+
+@mixin animate($from, $to, $name) {
+    @keyframes #{$name} {
+        from {
+            top: $from;
+        }
+        to {
+            top: $to;
+        }
+    }
+}
+
 //
 // Main navbar
 //
@@ -48,6 +61,18 @@
         position: fixed;
         top: 0;
         width: 100%;
+
+        &--announcement {
+            &-show {
+                @include animate(0, $announcement_height, shift);
+                animation: shift 0.5s forwards 1s;
+            }
+
+            &-hide {
+                @include animate($announcement_height, 0, unshift);
+                animation: unshift 0.5s forwards;
+            }
+        }
     }
 
     .navbar-brand {
@@ -280,6 +305,10 @@ nav.foldable-nav {
     width: 100%;
 }
 
+// 
+// Announcement bar
+// 
+
 .announcement-bar {
     $height: 1.5rem;
 
@@ -287,16 +316,18 @@ nav.foldable-nav {
     width: 100%;
     background-color: $black;
     color: $primary;
-    animation: fade-out 0.5s forwards 1s;
-
+    
     @include media-breakpoint-up(md) {
         position: fixed;
-        top: -$height;
-        height: $height;
+        top: -$announcement_height;
+        height: $announcement_height;
+        @include animate(-$announcement_height, 0, announcement-show);
+        animation: announcement-show 0.5s forwards 1s;
     }
 
-    &--hidden {
-        animation: fade-in 0.5s forwards;
+    &--hide {
+        @include animate(0, -$announcement_height, announcement-hide);
+        animation: announcement-hide 0.5s forwards;
     }
 
     &__button-close {
@@ -305,24 +336,6 @@ nav.foldable-nav {
             fill: $white;
             height: 1.5rem;
             width: 1.5rem
-        }
-    }
-
-    @keyframes fade-out {
-        from {
-            top: -$height;
-        }
-        to {
-            top: 0;
-        }
-    }
-
-    @keyframes fade-in {
-        from {
-            top: 0;
-        }
-        to {
-            top: -$height;
         }
     }
 }
