@@ -72,4 +72,6 @@ window.markmap = {
 <!-- scripts for prism -->
 <script src='{{ "/js/prism.js" | relURL }}'></script>
 {{ end }}
+{{ $announcementBar := resources.Get "js/announcement-bar.js" | minify | fingerprint }}
+<script src="{{ $announcementBar.RelPermalink }}"></script>
 {{ partial "hooks/body-end.html" . }}
