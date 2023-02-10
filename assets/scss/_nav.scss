@@ -321,7 +321,6 @@ nav.foldable-nav {
         position: fixed;
         top: -$announcement_height;
         height: $announcement_height;
-        // animation: fade-out 0.5s forwards 1s;
         @include animate(-$announcement_height, 0, announcement-show);
         animation: announcement-show 0.5s forwards 1s;
     }
@@ -339,49 +338,4 @@ nav.foldable-nav {
             width: 1.5rem
         }
     }
-
-    // @keyframes fade-out {
-    //     from {
-    //         top: -$height;
-    //     }
-    //     to {
-    //         top: 0;
-    //     }
-    // }
-
-    // @keyframes fade-in {
-    //     from {
-    //         top: 0;
-    //     }
-    //     to {
-    //         top: -$height;
-    //     }
-    // }
 }
-
-
-// .pull-out {
-//     animation: fade-out 0.5s forwards 1s;
-// }
-
-// .pull-in {
-//     animation: fade-in 0.5s forwards;
-// }
-
-// @keyframes fade-out {
-//     from {
-//         top: -$announcement_height;;
-//     }
-//     to {
-//         top: 0;
-//     }
-// }
-
-// @keyframes fade-in {
-//     from {
-//         top: 0;
-//     }
-//     to {
-//         top: -$announcement_height;;
-//     }
-// }
