@@ -4,54 +4,63 @@ description: Operating and Managing Falco
 weight: 4
 ---
 
+## Falco packages
 
-## Run Falco as a service
+If you installed the Falco packages using the `dialog` all your services should be already up and running, while if you chose the `Manual configuration` or if you used the `FALCO_FRONTEND=noninteractive` env variable you have to configure services by your hand. Here we show a simple example with the `eBPF probe`.
 
-If you installed Falco by using [the DEB or the RPM](/docs/getting-started/installation) package, then falco systemd service was already started and enabled for you.  
-In case you wish to stop or disable it, issue:
+Let's imagine we want to start the `falco-bpf.service`.
+
+1. Type `systemctl list-units | grep falco` to check that no unit is running.
+
+2. Now you have to decide whether you want the Falcoctl service running together with the Falco one. If yes you don't have to do anything, else you will need to mask the Falcoctl service with `systemctl mask falcoctl-artifact-follow.service`. As pointed out [in this section](/docs/getting-started/installation/#rule-update) the Falcoctl service is strictly related to the Falco one so if you don't mask it, it will be started together with the Falco service.
+
+3. Type `falco-driver-loader bpf` to download/compile the BPF probe.
+
+4. Now running `systemctl start falco-bpf.service` and typing `systemctl list-units | grep falco` you should see something like that (supposing you didn't mask the Falcoctl service):
+
+    ```text
+    falco-bpf.service                                 loaded active running   Falco: Container Native Runtime Security with ebpf
+    falcoctl-artifact-follow.service                  loaded active running   Falcoctl Artifact Follow: automatic artifacts update service
+    ```
+
+5. If you want to stop both services in one shot
+
+    ```bash
+    systemctl stop falco-bpf.service
+    ```
+
+### Custom run
+
+You may have noticed a Falco unit called `falco-custom.service`. You should use it when you want to run Falco with a custom configuration like a plugin or Gvisor. Please note that in this case you have to modify this template according to how you want to run Falco, the unit should not be used as is!
+
+## Falco binary
+
+Here you can find some examples of how to run Falco after having [installed](/docs/getting-started/installation/#falco-binary) it using the binary package
 
 
-```console
-systemctl disable falco
-```
-
-```console
-systemctl stop falco
-```
-
-Then, to enable or start it back, you would need:
-
-```console
-systemctl enable falco
-```
-
-```console
-systemctl start falco
-```
-
-You can also view the Falco logs using `journalctl`.
-
-```console
-journalctl -fu falco
-```
-
-## Run Falco manually
-
-If you'd like to run Falco by hand, you can find the full usage description for Falco by typing:
-
-```console
+```bash
+# Kernel module (default driver)
+falco
+# eBPF probe
+FALCO_BPF_PROBE="" falco
+# modern eBPF probe
+falco --modern-bpf
+# For more info see all available options
 falco --help
 ```
 
-{{% pageinfo color="primary" %}}
+{{% pageinfo color="warning" %}}
 
-Are you looking for userspace instrumentation? Please see [this page](/docs/event-sources/drivers/#userspace-instrumentation).
+If you are using the eBPF probe, in order to ensure that performance is not degraded, make sure that
+
+* Your kernel has `CONFIG_BPF_JIT` enabled
+* `net.core.bpf_jit_enable` is set to 1 (enable the BPF JIT Compiler)
+* This can be verified via `sysctl -n net.core.bpf_jit_enable`
 
 {{% /pageinfo %}}
 
 
-## Run within Docker {#docker}
-
+## Docker {#docker}
 
 {{% pageinfo color="primary" %}}
 
@@ -63,6 +72,7 @@ You can find instructions on how to install the kernel headers for your system u
 
 Falco ships a set of official [docker images](/docs/getting-started/download#images).
 The images can be used in two ways as follows:
+
 - [Least privileged (recommended)](#docker-least-privileged)
 - [Fully privileged](#docker-privileged)
 
@@ -90,10 +100,8 @@ Once the kernel module has been installed directly on the host system, it can be
         falcosecurity/falco-driver-loader:latest
     ```
 
-
 The `falcosecurity/falco-driver-loader` image just wraps the `falco-driver-loader` script.
 You can find more about its usage [here](/docs/getting-started/installation#install-driver)
-
 
 2. Run Falco in a container using Docker with the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege):
 
@@ -105,7 +113,6 @@ You can find more about its usage [here](/docs/getting-started/installation#inst
         -v /var/run/docker.sock:/var/run/docker.sock \
         falcosecurity/falco-no-driver:latest
     ```
-
 
 {{% pageinfo color="warning" %}}
 If you are running Falco on a system with the AppArmor LSM enabled (e.g Ubuntu), you will also need to pass `--security-opt apparmor:unconfined` to
@@ -119,18 +126,19 @@ docker info | grep -i apparmor
 
 {{% /pageinfo %}}
 
-
 {{% pageinfo color="primary" %}}
 
 Note that `ls /dev/falco* | xargs -I {} echo --device {}` outputs a `--device /dev/falcoX` option per CPU (ie. just the devices created by the Falco's kernel module). Also, `-e HOST_ROOT=/` is necessary since with `--device` there is no way to remap devices to `/host/dev/`.
 
 {{% /pageinfo %}}
 
-To run Falco in least privileged mode with the eBPF driver, we list all the required capabilities: 
+To run Falco in least privileged mode with the eBPF driver, we list all the required capabilities:
+
 - on kernels <5.8, Falco requires `CAP_SYS_ADMIN`, `CAP_SYS_RESOURCE` and `CAP_SYS_PTRACE`
 - on kernels >=5.8, `CAP_BPF` and `CAP_PERFMON` were separated out of `CAP_SYS_ADMIN`, so the required capabilities are `CAP_BPF`, `CAP_PERFMON`, `CAP_SYS_RESOURCE`, `CAP_SYS_PTRACE`. Unfortunately, Docker does not yet support adding the two newly introduced capabilities with the `--cap-add` option. For this reason, we continue using `CAP_SYS_ADMIN`, given that it still allows performing the same operations granted by `CAP_BPF` and `CAP_PERFMON`. In the near future, Docker will support adding these two capabilities and we will be able to replace `CAP_SYS_ADMIN`.
 
 1. Install the eBPF probe
+
     ```shell
     docker pull falcosecurity/falco-driver-loader:latest
     docker run --rm -i -t \
@@ -143,7 +151,9 @@ To run Falco in least privileged mode with the eBPF driver, we list all the requ
         -v /etc:/host/etc:ro \
         falcosecurity/falco-driver-loader:latest bpf
     ```
+
 2. Then, run Falco
+
     ```shell
     docker pull falcosecurity/falco-no-driver:latest
     docker run --rm -i -t \
@@ -161,9 +171,10 @@ To run Falco in least privileged mode with the eBPF driver, we list all the requ
 
 {{% pageinfo color="warning" %}}
 
-Again, you will need to add `--security-opt apparmor:unconfined` to the last command if your system has the AppArmor LSM enabled. 
+Again, you will need to add `--security-opt apparmor:unconfined` to the last command if your system has the AppArmor LSM enabled.
 
 {{% /pageinfo %}}
+
 ### Fully privileged {#docker-privileged}
 
 To run Falco in a container using Docker with full privileges use the following commands.
@@ -230,6 +241,7 @@ docker run --rm -i -t \
 ```
 
 To use `falco-no-driver` and `falco-driver-loader` with the eBPF probe you have to remove the `-v /dev:/host/dev` (which is only required by the Kernel Module) and add:
+
 ```shell
     -e FALCO_BPF_PROBE="" -v /root/.falco:/root/.falco \
 ```
@@ -239,7 +251,39 @@ Other configurable options:
 - `DRIVER_REPO` - See the [Installing the driver](https://falco.org/docs/getting-started/installation/#install-driver) section.
 - `SKIP_DRIVER_LOADER` - Set this environment variable to avoid running `falco-driver-loader` when the `falcosecurity/falco` image starts. Useful when the driver has been already installed on the host by other means.
 
+### Modern eBPF
+
+#### Privileged
+
+The modern BPF is shipped into Falco so the `falco-no-driver` image is enough. This allows you to run Falco without dependencies, just the following command:
+
+```bash
+docker run --rm -i -t \
+           --privileged \
+           -v /var/run/docker.sock:/host/var/run/docker.sock \
+           -v /proc:/host/proc:ro \
+           falcosecurity/falco-no-driver:latest falco --modern-bpf
+```
+
+#### Least privileged
+
+Right now **is not officialy supported** but the following command should work great:
+
+```bash
+docker run --rm -i -t \
+           --cap-drop all \
+           --cap-add sys_admin \
+           --cap-add sys_resource \
+           --cap-add sys_ptrace \
+           -v /var/run/docker.sock:/host/var/run/docker.sock \
+           -v /proc:/host/proc:ro \
+           falcosecurity/falco-no-driver:latest falco --modern-bpf
+```
+
+> __Note__: we cannot use `CAP_BPF` and `CAP_PERFMON` since [docker doesn't support](https://github.com/moby/moby/pull/41563) them yet
+
 ## Rules validation
+
 It's possible to validate Falco rules without installation by using the Docker image.
 
 ```bash
