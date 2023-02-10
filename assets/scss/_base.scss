@@ -63,3 +63,13 @@ section#cncf {
 .min-h-auto {
     min-height: auto;
 }
+
+.underline {
+    text-decoration: underline !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none !important;
+    }
+}
