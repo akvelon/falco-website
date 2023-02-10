@@ -4,15 +4,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-12">
-        <h1 class="display-1 mb-3">{{ T "home_falco_what_is_falco_title" | markdownify }}</h1>
-        <p class="mb-5">{{ T "home_falco_what_is_falco" | markdownify }}</p>
-        <p class="text-dark text-uppercase font-weight-bold mb-1">{{ T "home_falco_get_started" | markdownify }}</p>
-        <a href="#" role="button" class="btn btn-primary px-5 py-2 mt-3">
+        <h1 class="display-1">
+          {{ T "home_falco_what_is_falco_title" | markdownify }}
+        </h1>
+        <p class="mb-0 mt-3 text-body">
+          {{ T "home_falco_what_is_falco" | markdownify }}
+        </p>
+        <a href="#" role="button" class="btn btn-lg btn-primary px-5 py-2 mt-5">
           {{ T "home_falco_primary_btn" | markdownify }}
         </a>
       </div>
       <div class="col-md-6 col-12">
-        <img src="/img/svg/falco-schema.svg" alt="plug"/>
+        <img class="schema" src="/img/svg/falco-schema.svg" alt="plug" />
       </div>
     </div>
   </div>
@@ -20,15 +23,12 @@
 
 <section class="row">
   <div class="container td-arrow-down">
-      <div class="row">
-          <div class="col-12 col-md-5">
-              <a href="/" class="tag">{{ T "home_falco_features_tag" | markdownify}}</a>
-              <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">{{ T "home_falco_features" }} </h3>
-          </div>
-          <div class="col-12 col-md-7">
-              {{ partial "features.html" . }}
-          </div>
+    <div class="row">
+      <div class="col-12">
+        <h3 class="display-3">{{ T "home_falco_features" | markdownify }}</h3>
+        <div class="mt-3">{{ partial "features.html" . }}</div>
       </div>
+    </div>
   </div>
 </section>
 
@@ -38,33 +38,49 @@
     <h3 class="display-2 mt-3">
       {{ T "homa_falco_secured_by_falco" | markdownify }}
     </h3>
-    <div class="swiper__container d-flex justify-content-center align-items-center mt-4">
-      <span class="swiper__control">{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}</span>
+    <div
+      class="swiper__container d-flex justify-content-center align-items-center mt-4"
+    >
+      <span class="swiper__control"
+        >{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . |
+        minify).Content | safeHTML }}{{ end }}</span
+      >
       <div class="swiper">
         <div class="swiper-wrapper">
-          {{ $data := index $.Site.Data .Site.Language.Lang }}
-          {{ range $quote := $data.quotes }}
+          {{ $data := index $.Site.Data .Site.Language.Lang }} {{ range $quote
+          := $data.quotes }}
           <div class="swiper-slide px-3">
-            {{ partial "quote.html" (dict "text" $quote.text  "logoUrl" $quote.logoUrl "authorImgUrl" $quote.authorImgUrl "authorName" $quote.authorName "authorPosition" $quote.authorPosition) }}
+            {{ partial "quote.html" (dict "text" $quote.text "logoUrl"
+            $quote.logoUrl "authorImgUrl" $quote.authorImgUrl "authorName"
+            $quote.authorName "authorPosition" $quote.authorPosition) }}
           </div>
           {{ end }}
         </div>
-        <div class="swiper__pagination d-flex justify-content-center mt-4"></div>
+        <div
+          class="swiper__pagination d-flex justify-content-center mt-4"
+        ></div>
       </div>
-      <span class="swiper__control-reverse">{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}</span>
+      <span class="swiper__control-reverse"
+        >{{ with resources.Get "icons/chevron-down.svg" }}{{ ( . |
+        minify).Content | safeHTML }}{{ end }}</span
+      >
     </div>
   </div>
 </section>
 
 <section class="row">
   <div class="container td-arrow-down">
-      <div class="row">
-          <div class="col">
-              <a href="/community/" class="tag">{{ T "home_falco_community_tag" | markdownify}}</a>
-              <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">{{ T "home_falco_community" }} </h3>
-              {{ partial "community.html" . }}
-          </div>
+    <div class="row">
+      <div class="col">
+        <a href="/community/" class="tag"
+          >{{ T "home_falco_community_tag" | markdownify}}</a
+        >
+        <h3 class="display-2 mt-3 pt-1 mb-4 pb-3">
+          {{ T "home_falco_community" }}
+        </h3>
+        {{ partial "community.html" . }}
       </div>
+    </div>
   </div>
 </section>
 

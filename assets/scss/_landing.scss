@@ -2,6 +2,12 @@
 
 $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
 
+.schema {
+  @include media-breakpoint-up(lg){
+    margin-top: -5rem
+  }
+}
+
 .community-card {
   height: 12.5rem;
 
@@ -31,10 +37,17 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
 .feature-card {
   background-color: $gray-2;
 
-  &__wrapper {
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: column;
+  &:has(button[aria-expanded="true"]) {
+    @include media-breakpoint-up(lg) {
+      animation: out 0.35s ease backwards;
+      height: fit-content;
+    }
+  }
+
+  &:has(button[aria-expanded="false"]) {
+    @include media-breakpoint-up(lg) {
+      animation: in 0.35s ease forwards;
+    }
   }
 
   &__expand-control {
@@ -56,6 +69,9 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
     &[aria-expanded="true"] {
       .collapsed {
         display: none;
+        &:parent.feature-card {
+          height: 20rem;
+        }
       }
     }
   }
@@ -66,6 +82,24 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
     background-color: $white;
     align-self: flex-start;
     box-shadow: $icon-shadow;
+  }
+
+  @keyframes in {
+    from {
+      height: fit-content;
+    }
+    to {
+      height: 20rem;
+    }
+  }
+
+  @keyframes out {
+    from {
+      height: 20rem;
+    }
+    to {
+      height: fit-content;
+    }
   }
 }
 

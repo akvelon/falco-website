@@ -1,7 +1,7 @@
 @import "variables";
 
 body.td-home {
-    background-color: #FAFAFA;
+    background-color: $background-color;
 }
 
 section#cncf {
@@ -72,4 +72,8 @@ section#cncf {
     &:active {
         text-decoration: none !important;
     }
+}
+
+.text-body {
+    font-size: 1.25rem;
 }

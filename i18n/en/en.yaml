@@ -46,16 +46,12 @@ home_falco_community:
   other: Follow us to stay in touch
 home_falco_primary_btn:
   other: Try Falco
-how_it_works_btn:
-  other: More features
 add_your_logo_btn:
   other: Add your logo
 home_falco_is_used_by:
   other: Falco is also used by
-home_falco_features_tag:
-  other: Falco features
 home_falco_features:
-  other: Explore our features to protect your product
+  other: What makes us different?
 home_show_more:
   other: Show more
 home_show_less:
@@ -63,9 +59,7 @@ home_show_less:
 home_falco_what_is_falco_title:
   other: Detect and respond to threats in real time
 home_falco_what_is_falco:
-  other: Falco is tFhe open source standard for risk and threat detection for containers, Kubernetes and the cloud. Get visibility into unexpected behaviors, config changes, intrusions, and data theft in real time.
-home_falco_get_started:
-  other: "Get started in 2 easy steps: choose your driver and run Falco."
+  other: Falco is the open source standard for risk and threat detection for containers, Kubernetes and the cloud. Get visibility into unexpected behaviors, config changes, intrusions, and data theft in real time.
 home_falco_testimonials_tag:
   other: Testimonials
 homa_falco_secured_by_falco:
