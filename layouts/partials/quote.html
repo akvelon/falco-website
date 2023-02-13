@@ -1,11 +1,11 @@
 <div class="card card-rounded card-rounded--shaded h-100">
   <div class="card-body d-flex flex-column justify-content-between">
     {{ with .shareStory }}
-    <img class="quote-slide__logo" src="{{ $.logoUrl }}" alt="Quote Logo" />
-    <p class="card-text mb-0 mt-4 flex-grow-1">{{ $.text | markdownify }}</p>
-    <div class="d-flex mt-4">
-      444
-    </div>
+      <img class="quote-slide__logo" src="{{ $.logoUrl }}" alt="Quote Logo" />
+      <h3 class="display-3 card-text mb-0 mt-4 flex-grow-1">{{ $.text | markdownify }}</h3>
+      <a href="#" role="button" class="btn btn-primary d-block">
+        {{ T "share_your_story_btn" | markdownify }}
+      </a>
     {{ else }}
       <img class="quote-slide__logo" src="{{ .logoUrl }}" alt="Quote Logo" />
       <p class="card-text mb-0 mt-4 flex-grow-1">"{{ .text | markdownify }}"</p>
