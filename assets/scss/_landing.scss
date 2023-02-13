@@ -161,23 +161,35 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
   $width: 50rem;
   $height: 50rem;
 
+  &__layout {
+    position: absolute;
+    left: 50%;
+    // height: 1000px;
+    transform: translate(-50%, -50%);
+    z-index: -9999;
+    top: 0;
+  }
+
   position: absolute;
   height: $height;
   width: $width;
   background: linear-gradient(180deg, rgba(3, 180, 200, 0) 0%, $primary 100%);
   opacity: 0.3;
   filter: blur(100px);
-  transform: rotate(30deg);
   z-index: -9999;
 
   &-top {
-    left: calc(100% / 2 - #{$width});
-    top: $height + 10rem;
+    top: 85rem;
+    left: -20rem;
   }
 
   &-bottom {
-    right: calc(100% / 2 - #{$width});
-    top: calc(#{$height} * 2.5 + 10rem);
+    top: 173rem;
+    right: 0;
+  }
+
+  @include media-breakpoint-down(md){
+    display: none;
   }
 }
 
