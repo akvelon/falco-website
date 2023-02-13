@@ -23,13 +23,6 @@
             <a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a>
           </small>
           {{ end }}
-          {{ if not .Site.Params.ui.footer_about_disable }}
-            {{ with .Site.GetPage "about" }}
-              <p class="mt-2"><
-              a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </p>
-            {{ end }}
-          {{ end }}
         </div>
       </div>
       <div class="col-lg-6 pl-2 pt-3 pt-lg-0">
