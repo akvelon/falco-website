@@ -35,6 +35,11 @@ section#cncf {
         background-color: $cyan-9;
         color: $white
     }
+
+    &--transparent {
+        background-color: transparent !important;
+        color: $cyan-5 !important;
+    }
 }
 
 .card.card-rounded {
