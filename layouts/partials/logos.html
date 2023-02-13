@@ -1,15 +1,16 @@
-{{ $adopters := $.Site.Params.adopters }} 
-{{ $usedBy := index $adopters "used-by" }}
-
 <div class="grid-lg-5 grid-md-4 grid-sm-3 grid-2 gap-5">
-  {{- range $usedBy }}
-  <div class="my-auto">
-    <figure>
-      <a href="{{ .url }}">
-        <img class="img-fluid" src="{{ printf "/img/adopters/%s" .src | relURL }}" alt="{{ .alt }}">
-      </a>
-    </figure>
-  </div>
-  {{- end }}
+  {{ range $.Site.Data.adopters }}
+    {{ range . }}
+      {{ range . }}
+        <div class="my-auto">
+          <figure>
+              <a href="{{ .url }}">
+                <img class="img-fluid" src="{{ printf "/img/adopters/%s" .src | relURL }}" alt="{{ .alt }}">
+              </a>
+          </figure>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </div>
 
