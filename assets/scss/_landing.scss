@@ -9,23 +9,11 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
 }
 
 .community-card {
-  height: 12.5rem;
-
-  &--gray {
-    background-color: $gray-2;
-  }
+  height: 12rem;
 
   .card-text {
     font-size: 0.75rem;
     opacity: 0.5;
-  }
-
-  &__icon-wrapper {
-    padding: 1.5rem;
-    border-radius: 50vh;
-    background-color: $white;
-    align-self: flex-start;
-    box-shadow: $icon-shadow;
   }
 
   &__icon {
@@ -89,13 +77,13 @@ $icon-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
       height: fit-content;
     }
     to {
-      height: 20rem;
+      height: 20.5rem;
     }
   }
 
   @keyframes out {
     from {
-      height: 20rem;
+      height: 20.5rem;
     }
     to {
       height: fit-content;

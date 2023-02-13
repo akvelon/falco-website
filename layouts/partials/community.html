@@ -1,6 +1,4 @@
-{{ $links := site.Data.en.community.links }} {{ $cncf
-:=site.Data.en.community.cncf }}
-<div class="container p-0">
+{{ $links := site.Data.en.community }} 
   <div class="grid-md-3 grid-lg-4 grid-1 grid-sm-2 gap-4">
     {{ range $links }}
     <div
@@ -16,17 +14,3 @@
     </div>
     {{ end }}
   </div>
-
-  <div class="card card-rounded community-card--gray mt-5">
-    <div class="card-body d-flex align-items-center gap-4">
-      <div class="community-card__icon-wrapper">
-        <a href="{{ $cncf.url }}">
-          <img class="community-card__icon" src="{{ $cncf.icon }}" />
-        </a>
-      </div>
-      <p class="card-title font-weight-bold display-3 mb-0">
-        {{ $cncf.title }} <a href="{{ $cncf.url }}">{{ $cncf.name }}</a>
-      </p>
-    </div>
-  </div>
-</div>
