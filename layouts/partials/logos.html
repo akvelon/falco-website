@@ -1,26 +1,15 @@
-{{ $adopters := $.Site.Params.adopters }}
+{{ $adopters := $.Site.Params.adopters }} 
 {{ $usedBy := index $adopters "used-by" }}
 
-<section class="row relative td-box--gradient td-box--height-auto">
-    <div class="container text-center">
-        <h3 class="display-2 mt-0 mt-md-3 mb-4 pb-3 text-left">{{ T "home_falco_is_used_by" }}</h3>
-        <br />
-        <div class="grid-lg-5 grid-md-4 grid-sm-3 grid-2 gap-5">
-            {{- range $usedBy }}
-            <div class=" my-auto">
-            <figure>
-                <a href="{{ .url }}">
-                <img class="img-fluid grey-scale" src="{{ printf "/img/adopters/%s" .src | relURL }}"
-                    alt="{{ .alt }}">
-                </a>
-            </figure>
-            </div>
-            {{- end }}
-        </div>
-        <div class="pt-5">
-          <a href="#" role="button" class="btn btn-primary px-4 py-2">
-            {{ T "add_your_logo_btn" | markdownify }}
-          </a>
-        </div>
+<div class="grid-lg-5 grid-md-4 grid-sm-3 grid-2 gap-5">
+  {{- range $usedBy }}
+  <div class="my-auto">
+    <figure>
+      <a href="{{ .url }}">
+        <img class="img-fluid" src="{{ printf "/img/adopters/%s" .src | relURL }}" alt="{{ .alt }}">
+      </a>
+    </figure>
+  </div>
+  {{- end }}
 </div>
-</section>
+

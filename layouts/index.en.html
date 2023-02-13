@@ -99,7 +99,18 @@
 </section>
 
 <!-- Adopters -->
-{{ partial "logos.html" . }}
+<section class="row relative">
+  <div class="container">
+    <h3 class="display-3">{{ T "home_falco_is_used_by" | markdownify }}</h3>
+    <div class="mt-4 pt-3">{{ partial "logos.html" . }}</div>
+    <div class="mt-5 d-flex justify-content-center">
+      <a href="#" role="button" class="btn btn-primary px-4 py-2">
+        {{ T "add_your_logo_btn" | markdownify }}
+      </a>
+    </div>
+  </div>
+</section>
+<!-- {{ partial "logos.html" . }} -->
 
 <!-- <div class="eclipse eclipse-top"></div>
 <div class="eclipse eclipse-bottom"></div> -->
