@@ -60,6 +60,14 @@ section#cncf {
     }
 }
 
+.card {
+    .card-text {
+        &--text-secondary {
+            color: $gray-550;
+        }
+    }
+}
+
 .grey-scale {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -81,4 +89,8 @@ section#cncf {
 
 .text-content {
     font-size: 1.25rem;
+}
+
+.rounded-md {
+    border-radius: 1.25rem;
 }
