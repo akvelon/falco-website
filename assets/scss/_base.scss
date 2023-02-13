@@ -21,6 +21,10 @@ section#cncf {
     line-height: 1.3;
 }
 
+.pt-4-5 {
+    padding-top: 2.5rem;
+}
+
 .tag {
     $base: 1.5rem;
 
@@ -62,8 +66,12 @@ section#cncf {
 
 .card {
     .card-text {
-        &--text-secondary {
+        &--secondary {
             color: $gray-550;
+        }
+
+        &--videos {
+            height: 76px;
         }
     }
 }
