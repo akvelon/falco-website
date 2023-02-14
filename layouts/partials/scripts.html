@@ -74,4 +74,6 @@ window.markmap = {
 {{ end }}
 {{ $announcementBar := resources.Get "js/announcement-bar.js" | minify | fingerprint }}
 <script src="{{ $announcementBar.RelPermalink }}"></script>
+{{ $searchbar := resources.Get "js/searchbar.js" | minify | fingerprint }}
+<script src="{{ $searchbar.RelPermalink }}"></script>
 {{ partial "hooks/body-end.html" . }}
