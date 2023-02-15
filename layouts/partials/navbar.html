@@ -8,9 +8,9 @@
 			{{ $p := . }}
 			{{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-          <li class="nav-item dropdown mr-4 d-none d-lg-block mb-2 mb-lg-0">
+          <li class="nav-item dropdown d-none d-lg-block mb-2 mb-lg-0">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            About
+            {{ .Name }}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             {{ range .Children }}

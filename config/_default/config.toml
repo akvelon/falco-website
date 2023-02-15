@@ -121,6 +121,7 @@ id = "UA-40398182-19"
 # Additional menu items
 
 [[menu.main]]
+    identifier = "about"
     name = "About"
     weight = 30
     url = "/about/"
@@ -143,18 +144,22 @@ id = "UA-40398182-19"
     parent = "about"
     weight = 3
 [[menu.main]]
+    identifier = "documentation"
     name = "Documentation"
     weight = 40
     url = "/docs/"
 [[menu.main]]
+    identifier = "blog"
     name = "Blog"
     weight = 50
     url = "/blog/"
 [[menu.main]]
+    identifier = "community"
     name = "Community"
     weight = 60
     url = "/community/"
 [[menu.main]]
+    identifier = "training"
     name = "Training"
     weight = 70
     url = "/training/"
