@@ -121,18 +121,45 @@ id = "UA-40398182-19"
 # Additional menu items
 
 [[menu.main]]
+    identifier = "about"
+    name = "About"
+    weight = 30
+    url = "/about/"
+[[menu.main]]
+    identifier = "about1"
+    name = "About1"
+    url = "/about/about1"
+    parent = "about"
+    weight = 1
+[[menu.main]]
+    identifier = "about2"
+    name = "About2"
+    url = "/about/about2"
+    parent = "about"
+    weight = 2
+[[menu.main]]
+    identifier = "about3"
+    name = "About2"
+    url = "/about/about3"
+    parent = "about"
+    weight = 3
+[[menu.main]]
+    identifier = "documentation"
     name = "Documentation"
     weight = 40
     url = "/docs/"
 [[menu.main]]
+    identifier = "blog"
     name = "Blog"
     weight = 50
     url = "/blog/"
 [[menu.main]]
+    identifier = "community"
     name = "Community"
     weight = 60
     url = "/community/"
 [[menu.main]]
+    identifier = "training"
     name = "Training"
     weight = 70
     url = "/training/"
