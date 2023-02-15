@@ -121,6 +121,28 @@ id = "UA-40398182-19"
 # Additional menu items
 
 [[menu.main]]
+    name = "About"
+    weight = 30
+    url = "/about/"
+[[menu.main]]
+    identifier = "about1"
+    name = "About1"
+    url = "/about/about1"
+    parent = "about"
+    weight = 1
+[[menu.main]]
+    identifier = "about2"
+    name = "About2"
+    url = "/about/about2"
+    parent = "about"
+    weight = 2
+[[menu.main]]
+    identifier = "about3"
+    name = "About2"
+    url = "/about/about3"
+    parent = "about"
+    weight = 3
+[[menu.main]]
     name = "Documentation"
     weight = 40
     url = "/docs/"
