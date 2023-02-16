@@ -126,23 +126,35 @@ id = "UA-40398182-19"
     weight = 30
     url = "/about/"
 [[menu.main]]
-    identifier = "about1"
-    name = "About1"
-    url = "/about/about1"
-    parent = "about"
+    identifier = "about-falco"
+    name = "About falco"
     weight = 1
+    url = "/about/falco/"
+    parent = "about"
 [[menu.main]]
-    identifier = "about2"
-    name = "About2"
-    url = "/about/about2"
+    identifier = "use-cases"
+    name = "Falco use cases"
+    url = "/about/use-cases/"
     parent = "about"
     weight = 2
 [[menu.main]]
-    identifier = "about3"
-    name = "About2"
-    url = "/about/about3"
+    identifier = "mitre"
+    name = "Mitre ATT&CK framework"
+    url = "/about/mitre/"
     parent = "about"
     weight = 3
+[[menu.main]]
+    identifier = "ecosystem"
+    name = "Ecosystem"
+    url = "/about/ecosystem/"
+    parent = "about"
+    weight = 4
+[[menu.main]]
+    identifier = "faq"
+    name = "FAQ"
+    url = "/about/faq/"
+    parent = "about"
+    weight = 5
 [[menu.main]]
     identifier = "documentation"
     name = "Documentation"
