@@ -14,7 +14,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="dropdown-item" href="{{ .URL | relLangURL}}">{{ .Name }}</a>
             {{ end }}
           </div>
          </li>
