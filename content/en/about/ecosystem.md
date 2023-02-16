@@ -2,4 +2,4 @@
 title: Ecosystem page
 ---
 
-<h2 style="padding-top: 100px;">Ecosystem page</h2>
+## Ecosystem page
