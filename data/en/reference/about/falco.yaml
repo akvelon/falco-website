@@ -1,0 +1,20 @@
+images:
+  what_is_falco: "/img/about/what_is_falco.png"
+  how_it_works: "/img/about/how_it_works.png"
+  instrumenting_system_calls: "/img/about/instrumenting_system_calls.png"
+  response_to_threats: "/img/about/response_to_threats.png"
+alts:
+  what_is_falco: "what is falco"
+  how_it_works: "how it works"
+  instrumenting_system_calls: "instrumenting system calls"
+  response_to_threats: "response to threats"
+headers:
+  what_is_falco: "What is falco"
+  how_it_works: "How it works"
+  instrumenting_system_calls: "Instrumenting system calls"
+  response_to_threats: "Response to threats"
+text:
+  what_is_falco: "<p>Created by Sysdig, Falco was contributed to the Cloud Native Computing Foundation (CNCF) in 2018 and moved to the incubating level in 2020.</p> <p>At the highest level, you can think of Falco like a network of security cameras for your infrastructure. You deploy Falco across a distributed infrastructure. Falco collects data (from the local machine or by talking to some API), runs a set of rules against it, and notifies you if something bad happens.</p> <p>Falco makes it easy to consume Linux kernel syscalls, and enrich those events with information from Kubernetes and the rest of the cloud native stack. Falco has a rich set of security rules specifically built for Kubernetes, Linux and cloud-native. Since its inception, Falco has been downloaded more than 50 million times, with more than 480% growth in the last two years.</p>"
+  how_it_works: "<p>Falco collects event data from a source and compares each event against a set of rules. New data sources can be added to Falco by developing plugins. Some examples of sources for Falco events are:</p><ul><li>System calls</li><li>Kubernetes audit logs</li><li>Cloud events (e.g. AWS CloudTrail)</li><li>Events from other systems (GitHub, Okta)</li></ul><p>Rules help the Falco engine identify security events. Falco comes pre-loaded with a comprehensive set of rules that cover host, container, Kubernetes and cloud security, and you can easily create your own rules to customize it.</p><p>System calls are one of the most important data sources for Falco. If an application has been compromised, Falco is able to detect malicious or suspicious behavior based on the system calls that it performs.</p>"
+  instrumenting_system_calls: "There are multiple ways in which Falco can capture an application’s system calls (also referred to as syscalls). The process is performance-critical, and there are two ways in which Falco instruments this: an eBPF probe or a Kernel Module.</p><p>eBPF is a revolutionary technology that allows us to run sandboxed programs inside an operating system. eBPF scripts are flexible and safe, and run extremely fast, making them perfect for capturing runtime security. This makes it ideal to instrument system calls for Falco.</p><p>Before eBPF, Kernel modules have been the norm for extending functionality in the Linux kernel. They run in privileged mode, and are written in C, making them very efficient and therefore a great option for performance-critical work. Falco also implements a driver as a kernel module.</p><p>Falcosidekick is another project of the Falco organization that connects Falco to a large ecosystem. Acting like a router, it allows you to distribute your events to more than 50 systems, such as email, Slack.</p>"
+  response_to_threats: "<p>With Falco and Falcosidekick, you can forward the suspicious events to your serverless/FaaS systems to trigger actions and answer to threats. It creates a full Response Engine to protect your environments.</p>"

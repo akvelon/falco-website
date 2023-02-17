@@ -1,0 +1,26 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+<header>
+  {{ partial "navbar.html" . }}
+</header>
+<div class="container-fluid td-outer">
+  <div class="td-main">
+    <div class="row">
+      <main class="col-12 px-5" role="main">
+        {{ $imageURL := .Site.Data.about.falco.images.what_is_falco }}
+        {{ $alt := .Site.Data.about.falco.alts.what_is_falco }}
+        {{ $header := .Site.Data.about.falco.headers.what_is_falco }}
+        {{ $text := .Site.Data.about.falco.text.what_is_falco }}
+        {{ two_column_block_img img-aligned="right" src=$imageURL alt=$$alt header=$header text=$text }}
+      </main>
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+</div>
+{{ partial "scripts.html" . }}
+</body>
+</html>
