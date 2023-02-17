@@ -1,0 +1,19 @@
+// TODO: merge with _variables when revamp is ready
+
+$black: #121212;
+
+$h1-font-size: $font-size-base * 5.25;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.35;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
+
+$card-border-radius:          2.5rem;
+$card-spacer-y:               2.5rem;
+$card-spacer-x:               2.5rem;
+$card-border-width:           0;
+
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow:                  0 .25rem 1.25rem rgba($black, .05);
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175);
