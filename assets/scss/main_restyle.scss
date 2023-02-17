@@ -1,0 +1,20 @@
+// 
+// TODO: Use this stylesheet only while restyle is WIP. Must be deleted when
+// all the sections are updated. variables must be placed to project variables
+// file
+// 
+@import "main";
+
+$card-border-radius: 2.5rem;
+$card-spacer-y: 2.5rem;
+$card-spacer-x: 2.5rem;
+$card-border-width: 0;
+
+.card {
+  max-width: unset;
+  @include border-radius($card-border-radius);
+}
+
+.card-body {
+  padding: $card-spacer-x;
+}
