@@ -1,5 +1,5 @@
-{{/*  TODO: Use this layout only for revamp. Must be deleted when moved to the new version of the website  */}}
-{{ $scssMain := "scss/main_revamp.scss"}}
+{{/*  TODO: Use this layout only while restyle is WIP. Must be deleted when moved to the new version of the website  */}}
+{{ $scssMain := "scss/main_restyle.scss"}}
 {{ if not hugo.IsProduction }}
 {{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
 {{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" true) }}
