@@ -1,27 +1,16 @@
 <div class="container">
   <div class="row">
-    {{ if eq (.Get "img-aligned") "right" }}
-      <div class="col-md-7 col-12 d-flex flex-column justify-content-center">
-        <h3>{{ .Get "header" }}</h3>
-        <p>
-          {{ .Get "text" | safeHTML }}
-        </p>
-      </div>
-      <div class="col-md-5 col-12 d-flex flex-column justify-content-center">
-        <img class="w-100" src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
-      </div>
-    {{ else }}
-      <div class="row">
-        <div class="col-md-5 col-12 d-flex flex-column justify-content-center">
-          <img class="w-100" src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
-        </div>
-        <div class="col-md-7 col-12 d-flex flex-column justify-content-center">
-          <h3>{{ .Get "header" }}</h3>
-          <p>
-            {{ .Get "text" | safeHTML }}
-          </p>
-        </div>
-      </div>
-    {{ end }}
+    {{ $index := .Get "index"}}
+    {{ $col1 := .Get "col" | default 7 }}
+    {{ $col2 := sub 12 $col1 }}
+    <div class="col-md-{{ $col1 }} col-12 order-{{ $index }} d-flex flex-column justify-content-center">
+      <img class="w-100" src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
+    </div>
+    <div class="col-md-{{ $col2 }} col-12 order-0 d-flex flex-column justify-content-center">
+      <h3>{{ .Get "header" }}</h3>
+      <p>
+        {{ $.Inner | markdownify }}
+      </p>
+    </div>
   </div>
 </div>
