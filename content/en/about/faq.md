@@ -1,5 +1,9 @@
 ---
 title: Faq page
+prev: /about/ecosystem
+prevTitle: Ecosystem
+next: /docs
+nextTitle: Documentation
 ---
 
 ## FAQs

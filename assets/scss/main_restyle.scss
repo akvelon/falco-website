@@ -15,12 +15,26 @@
   max-width: unset;
 }
 
+.card-deck {
+  max-width: unset;
+}
+
 .icon {
   padding: 1rem;
   width: max-content;
   border-radius: 50vh;
   background-color: $white;
   align-self: flex-start;
+}
+
+.icon-button {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50vh;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,

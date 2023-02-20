@@ -1,7 +1,7 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
 <head>
-  {{ partial "head-restyle.html" . }}
+  {{ partial "about/head.html" . }}
 </head>
 <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
 <header>
@@ -12,6 +12,7 @@
     <div class="row">
       <main class="col-12 px-5" role="main">
         {{ block "main" . }}{{ end }}
+        {{ partial "about/footer-nav.html" . }}
       </main>
     </div>
   </div>
