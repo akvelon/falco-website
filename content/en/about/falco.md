@@ -7,15 +7,9 @@ aliases:
 
 ## About Falco page
 
-  <div class="grid-md-3 gap-4">
+<div class="grid-md-3 gap-4">
   {{< card classNames="shadow" >}}
     <h3>If you are convinced, and want to learn more check our documentation</h3>
     <button>Click me</button>
-  {{< /card >}}
-  {{< card classNames="shadow" >}}
-  <button>444</button>
-  {{< /card >}}
-  {{< card classNames="shadow" >}}
-  3
   {{< /card >}}
 </div>
