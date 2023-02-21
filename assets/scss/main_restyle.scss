@@ -11,14 +11,6 @@
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/card";
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/utilities";
 
-.card {
-  max-width: unset;
-}
-
-.card-deck {
-  max-width: unset;
-}
-
 .icon {
   padding: 1rem;
   width: max-content;
@@ -65,4 +57,19 @@ body {
           border-radius: 0.5rem;
       }
   }
+}
+
+// Cards
+
+.card {
+  max-width: unset;
+  border-radius: $card-border-radius;
+}
+
+.card-deck {
+  max-width: unset;
+}
+
+.footer-nav {
+  padding-top: 3rem;
 }
