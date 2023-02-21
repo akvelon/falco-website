@@ -4,8 +4,6 @@ title: Faq page
 
 ## FAQs
 
-{{< feedback >}}
-
 {{< card_faq title="Lorem ipsum dolor sit amet, consectetur adipiscing elit" index=1 >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam urna non mattis euismod. Sed sit amet enim ut turpis lobortis euismod sed eget mi. Phasellus blandit semper pellentesque. Pellentesque vitae mi nec erat imperdiet varius. Pellentesque at ultricies lorem, non accumsan velit. Integer porttitor malesuada nisl, eget maximus quam lacinia feugiat. Donec pharetra, tortor quis sagittis facilisis, arcu purus pulvinar diam, in vulputate libero orci ut nisl.
@@ -23,6 +21,8 @@ Praesent dictum tristique lorem, in ornare leo egestas sit amet. Mauris cursus l
 Sed et leo congue, pharetra ex in, varius sapien. Nam ultrices hendrerit risus vel egestas. Proin eleifend efficitur aliquam. Praesent suscipit, ante ac imperdiet egestas, lacus metus consequat metus, id convallis turpis quam a nulla. Donec fermentum ex et nunc dignissim ornare. Etiam sit amet felis et nulla imperdiet condimentum. Nulla nec posuere orci, in malesuada sapien. Ut ac consequat elit. Ut eu gravida ligula. Phasellus quis ornare urna, non condimentum sem. Nunc facilisis eros ut urna maximus, vestibulum commodo nisi rutrum. Quisque sit amet erat eu mi auctor blandit. Cras consectetur mattis aliquam.
 
 {{< /card_faq >}}
+
+{{< feedback >}}
 
 {{< footer_nav 
   prev="/about/ecosystem"
