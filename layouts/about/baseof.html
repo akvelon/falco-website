@@ -1,23 +1,24 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
-<head>
-  {{ partial "about/head.html" . }}
-</head>
-<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
-<header>
-  {{ partial "navbar.html" . }}
-</header>
-<div class="container-fluid td-outer">
-  <div class="td-main">
-    <div class="row">
-      <main class="col-12 px-5" role="main">
-        {{ block "main" . }}{{ end }}
-        {{ partial "about/footer-nav.html" . }}
+  <head>
+    {{ partial "about/head.html" . }}
+  </head>
+  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-default td-outer">
+      <main class="td-main" role="main">
+          {{ block "main" . }}{{ end }}
+          <section class="row td-box">
+            <div class="col">{{ partial "about/feedback.html" . }}</div>
+          </section>
+          <section class="row td-box pt-0">
+            <div class="col">{{ partial "about/footer-nav.html" . }}</div>
+          </section>
       </main>
+      {{ partial "footer.html" . }}
     </div>
-  </div>
-  {{ partial "footer.html" . }}
-</div>
-{{ partial "scripts.html" . }}
-</body>
+    {{ partial "scripts.html" . }}
+  </body>
 </html>

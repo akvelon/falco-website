@@ -25,6 +25,7 @@
   border-radius: 50vh;
   background-color: $white;
   align-self: flex-start;
+  box-shadow: 0 0.25rem 1.5rem rgba($black, 0.1);
 }
 
 .icon-button {
@@ -48,4 +49,20 @@ h6 {
 
 body {
   background-color: $body-bg;
+}
+
+// Buttons
+
+@if $enable-rounded {
+  .btn {
+      border-radius: 0.5rem;
+
+      &-lg {
+          border-radius: 0.5rem;
+      }
+
+      &-sm {
+          border-radius: 0.5rem;
+      }
+  }
 }
