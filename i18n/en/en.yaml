@@ -42,3 +42,12 @@ general_previous_page:
   other: Previous page
 general_next_page:
   other: Next page
+general_yes:
+  other: "Yes"
+general_no:
+  other: "No"
+feedback_title:
+  other: Was this page helpful?
+feedback_subtitle:
+  other: Let us know! You feedback will help us to improve the content and to stay in touch with our users.
+  

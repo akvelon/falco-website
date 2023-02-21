@@ -4,6 +4,8 @@ title: Faq page
 
 ## FAQs
 
+{{< feedback >}}
+
 {{< card_faq title="Lorem ipsum dolor sit amet, consectetur adipiscing elit" index=1 >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam urna non mattis euismod. Sed sit amet enim ut turpis lobortis euismod sed eget mi. Phasellus blandit semper pellentesque. Pellentesque vitae mi nec erat imperdiet varius. Pellentesque at ultricies lorem, non accumsan velit. Integer porttitor malesuada nisl, eget maximus quam lacinia feugiat. Donec pharetra, tortor quis sagittis facilisis, arcu purus pulvinar diam, in vulputate libero orci ut nisl.
