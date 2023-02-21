@@ -9,12 +9,26 @@
     </header>
     <div class="container-fluid td-default td-outer">
       <main class="td-main" role="main">
-          {{ block "main" . }}{{ end }}
+        <section class="row td-box">
+          <div class="container">
+            <div class="col">
+            {{ block "main" . }}{{ end }}
+            </div>
+          </div> 
+        </section>
           <section class="row td-box">
-            <div class="col">{{ partial "about/feedback.html" . }}</div>
+            <div class="container">
+              <div class="col">
+                {{ partial "about/feedback.html" . }}
+              </div>
+            </div>
           </section>
           <section class="row td-box pt-0">
-            <div class="col">{{ partial "about/footer-nav.html" . }}</div>
+            <div class="container">
+              <div class="col">
+                {{ partial "about/footer-nav.html" . }}
+              </div>
+            </div>
           </section>
       </main>
       {{ partial "footer.html" . }}
