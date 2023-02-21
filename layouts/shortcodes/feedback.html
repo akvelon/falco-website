@@ -13,6 +13,12 @@
       <button class="btn btn-outline-primary px-5 feedback--answer-no">
         {{ T "general_no" | markdownify }}
       </button>
+      <p class="d-none feedback--response-yes mb-0 mt-3">
+        {{ T "feedback_yes" | safeHTML }}
+      </p>
+      <p class="d-none feedback--response-no mb-0 mt-3">
+        {{ T "feedback_no" | safeHTML }}
+      </p>
     </div>
   </div>
 </div>

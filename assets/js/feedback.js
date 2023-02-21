@@ -3,6 +3,7 @@
   const [noButton] = document.getElementsByClassName("feedback--answer-no");
   const [yesResponse] = document.getElementsByClassName("feedback--response-yes");
   const [noResponse] = document.getElementsByClassName("feedback--response-no");
+  
   const disableButtons = () => {
     yesButton.disabled = true;
     noButton.disabled = true;
@@ -27,12 +28,12 @@
     );
   };
   yesButton.addEventListener("click", () => {
-    yesResponse.classList.add("feedback--response__visible");
+    yesResponse.classList.remove("d-none");
     disableButtons();
     sendFeedback(1);
   });
   noButton.addEventListener("click", () => {
-    noResponse.classList.add("feedback--response__visible");
+    noResponse.classList.remove("d-none");
     disableButtons();
     sendFeedback(0);
   });
