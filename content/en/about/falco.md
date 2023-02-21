@@ -75,7 +75,7 @@ Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Ma
 {{< /card_faq >}}
 
 <div class="d-flex justify-content-center">
-  <a href="/about/faq/" class="btn btn-primary px-5 mt-5">Go to all FAQs</a>
+  <a href="/about/faq/" class="btn btn-primary px-4 py-2 mt-5">Go to all FAQs</a>
 </div>
 
 {{< feedback >}}
