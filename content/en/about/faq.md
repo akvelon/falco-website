@@ -1,9 +1,5 @@
 ---
 title: Faq page
-prev: /about/ecosystem
-prevTitle: Ecosystem
-next: /docs
-nextTitle: Documentation
 ---
 
 ## FAQs
@@ -25,3 +21,10 @@ Praesent dictum tristique lorem, in ornare leo egestas sit amet. Mauris cursus l
 Sed et leo congue, pharetra ex in, varius sapien. Nam ultrices hendrerit risus vel egestas. Proin eleifend efficitur aliquam. Praesent suscipit, ante ac imperdiet egestas, lacus metus consequat metus, id convallis turpis quam a nulla. Donec fermentum ex et nunc dignissim ornare. Etiam sit amet felis et nulla imperdiet condimentum. Nulla nec posuere orci, in malesuada sapien. Ut ac consequat elit. Ut eu gravida ligula. Phasellus quis ornare urna, non condimentum sem. Nunc facilisis eros ut urna maximus, vestibulum commodo nisi rutrum. Quisque sit amet erat eu mi auctor blandit. Cras consectetur mattis aliquam.
 
 {{< /card_faq >}}
+
+{{< footer_nav 
+  prev="/about/ecosystem"
+  prevTitle="Ecosystem"
+  next="/about/docs" 
+  nextTitle="Documentation" 
+>}}
