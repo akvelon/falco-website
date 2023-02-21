@@ -47,15 +47,15 @@ body {
 
 @if $enable-rounded {
   .btn {
+    border-radius: 0.5rem;
+
+    &-lg {
       border-radius: 0.5rem;
+    }
 
-      &-lg {
-          border-radius: 0.5rem;
-      }
-
-      &-sm {
-          border-radius: 0.5rem;
-      }
+    &-sm {
+      border-radius: 0.5rem;
+    }
   }
 }
 
@@ -64,6 +64,18 @@ body {
 .card {
   max-width: unset;
   border-radius: $card-border-radius;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 0;
+  }
+
+  p.card-text {
+    margin-bottom: 0;
+  }
 }
 
 .card-deck {
@@ -76,4 +88,26 @@ body {
 
 .feedback {
   margin-top: 5rem;
+}
+
+.td-box {
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+main {
+  p,
+  li {
+    font-size: 1.25rem;
+  }
+}
+
+h2[id]:before,
+h3[id]:before,
+h4[id]:before,
+h5[id]:before {
+  margin-top: 0;
+  height: 0;
 }
