@@ -2,7 +2,11 @@
 title: Faq page
 ---
 
-## FAQs
+{{< blocks/content wrap="col" >}}
+  ## FAQs
+{{< /blocks/content >}}
+
+{{< blocks/content content="html" wrap="col" >}}
 
 {{< card_faq title="Lorem ipsum dolor sit amet, consectetur adipiscing elit" index=1 >}}
 
@@ -22,11 +26,22 @@ Sed et leo congue, pharetra ex in, varius sapien. Nam ultrices hendrerit risus v
 
 {{< /card_faq >}}
 
-{{< feedback >}}
+{{< /blocks/content >}}
 
+{{< blocks/content content="html" wrap="col">}}
+{{< feedback >}}
+{{< /blocks/content >}}
+
+{{< blocks/content content="html" wrap="col">}}
 {{< footer_nav 
+  prev="/about/falco"
+  prevTitle="About Falco"
+  next="/docs" 
+  nextTitle="Documentation" >}}
+<!-- TODO: uncomment when ecosystems section is ready -->
+<!-- {{< footer_nav 
   prev="/about/ecosystem"
   prevTitle="Ecosystem"
   next="/about/docs" 
-  nextTitle="Documentation" 
->}}
+  nextTitle="Documentation" >}} -->
+{{< /blocks/content >}}
