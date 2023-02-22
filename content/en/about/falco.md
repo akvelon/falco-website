@@ -10,7 +10,9 @@ In an organization’s security posture, it is important to have security practi
 
 Security measures like supply chain security are vital to safeguarding your organization, however, they don't cover all potential attack surfaces. Real-world scenarios have demonstrated that significant vulnerabilities can go undetected and can be exploited for prolonged periods of runtime in the software supply chain.
 
-![What is runtime security and why it matters](/img/about/runtime_security.png)
+<div>
+<img class="w-100" src="/img/about/runtime_security.png" alt="What is runtime security and why it matters">
+</div>
 
 With the increasing number of cyber-attacks and breaches, it's crucial to have real-time monitoring and protection for your systems. Runtime security provides a layer of protection that helps to identify and respond to security incidents as they happen, minimizing the impact of breaches, including those relying on vulnerabilities that may not have been discovered yet. 
 
@@ -50,6 +52,37 @@ Falcosidekick is another project of the Falco organization that connects Falco t
 {{< two_column_block_img img-aligned="left" src="/img/about/response_to_threats.png" alt="response to threats" index=0 header="Response to threats" >}}
 With Falco and Falcosidekick, you can forward the suspicious events to your serverless/FaaS systems to trigger actions and answer to threats. It creates a full Response Engine to protect your environments.
 {{< /two_column_block_img >}}
+
+<div class="grid-md-3 gap-4">
+
+<div class="card shadow mt-4 mt-md-0">
+<div class="card-body d-flex flex-column justify-content-between">
+<h3 class="display-4 font-weight-normal">If you are convinced, and want to learn more check our documentation</h3>
+<div>
+  <a href="/docs/" class="btn btn-primary px-4 py-2 mt-5">Learn more</a>
+</div>
+</div>
+</div>
+
+<div class="card shadow mt-4 mt-md-0">
+<div class="card-body d-flex flex-column justify-content-between">
+<h3 class="display-4 font-weight-normal">Here is how to get started with Falco</h3>
+<div>
+  <a href="/docs/getting-started/" class="btn btn-primary px-4 py-2 mt-5">Learn more</a>
+</div>
+</div>
+</div>
+
+<div class="card shadow mt-4 mt-md-0">
+<div class="card-body d-flex flex-column justify-content-between">
+<h3 class="display-4 font-weight-normal">The most common use cases for Falco</h3>
+<div>
+  <a href="/about/use-cases/" class="btn btn-primary px-4 py-2 mt-5">Learn more</a>
+</div>
+</div>
+</div>
+
+</div>
 
 ### Falco FAQs
 
