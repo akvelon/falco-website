@@ -20,3 +20,13 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
 
 $body-bg: #FAFAFA;
 $card-deck-margin: 0.75rem;
+
+$td-block-space-top-base: 2 * $spacer;
+$td-block-space-bottom-base: 2 * $spacer;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px
+);
