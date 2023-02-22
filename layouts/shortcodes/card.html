@@ -29,13 +29,13 @@
       </h6>
     {{ end }}
     {{ with $.Inner }}
-      <p class="card-text">
+      <div class="card-text">
         {{ if eq $.Page.File.Ext "md" }}
           {{ $.Inner | markdownify }}
         {{ else }}
           {{ $.Inner | htmlUnescape | safeHTML }}
         {{ end }}
-      </p>
+      </div>
     {{ end }}
   </div>
   {{ with $.Get "footer" }}
