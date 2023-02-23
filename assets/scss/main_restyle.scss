@@ -61,7 +61,7 @@ body {
 
 // TODO: this to remove when redesign is finished. This behaviour must be
 // controlled through $enable-gradients and $enable-shadows variables
-.btn {
+.btn, .btn-link {
   @if $enable-gradients == false {
     background-image: none;
 
@@ -84,6 +84,15 @@ body {
     &:hover,.hover {
       box-shadow: none;
     }
+  }
+}
+
+.btn-link {
+  font-weight: $font-weight-bold;
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
   }
 }
 
