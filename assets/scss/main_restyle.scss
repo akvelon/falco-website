@@ -7,10 +7,22 @@
 @import "variables_restyle";
 
 // Bootstrap imports to override
+@import "../../themes/docsy/assets/vendor/bootstrap/scss/mixins/buttons";
+@import "../../themes/docsy/assets/vendor/bootstrap/scss/mixins/gradients";
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/type";
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/card";
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/utilities";
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/grid";
+@import "../../themes/docsy/assets/vendor/bootstrap/scss/buttons";
+
+@mixin gradient-bg($color) {
+  @debug $enable-gradients;
+  @if $enable-gradients {
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+  } @else {
+    background-color: $color;
+  }
+}
 
 .icon {
   padding: 1rem;
@@ -47,22 +59,46 @@ body {
 
 // Buttons
 
-@if $enable-rounded {
-  .btn {
-    border-radius: 0.5rem;
+// TODO: this to remove when redesign is finished. This behaviour must be
+// controlled through $enable-gradients and $enable-shadows variables
+.btn, .btn-link {
+  @if $enable-gradients == false {
+    background-image: none;
 
-    &-lg {
-      border-radius: 0.5rem;
+    &:focus,.focus {
+      background-image: none;
     }
 
-    &-sm {
-      border-radius: 0.5rem;
+    &:hover,.hover {
+      background-image: none;
     }
+  }
+
+  @if $enable-shadows == false {
+    box-shadow: none;
+
+    &:focus,.focus {
+      box-shadow: none;
+    }
+
+    &:hover,.hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-link {
+  font-weight: $font-weight-bold;
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
   }
 }
 
 // Cards
 
+// Overrides docsy default behaviour
 .card {
   max-width: unset;
   border-radius: $card-border-radius;
