@@ -14,7 +14,7 @@ title: About falco page
 
   Security measures like supply chain security are vital to safeguarding your organization, however, they don't cover all potential attack surfaces. Real-world scenarios have demonstrated that significant vulnerabilities can go undetected and can be exploited for prolonged periods of runtime in the software supply chain.
 
-  ![What is runtime security and why it matters](/img/about/runtime_security.png#img-fit)
+  ![What is runtime security and why it matters](/img/about/runtime_security.svg#img-fit)
 
   With the increasing number of cyber-attacks and breaches, it's crucial to have real-time monitoring and protection for your systems. Runtime security provides a layer of protection that helps to identify and respond to security incidents as they happen, minimizing the impact of breaches, including those relying on vulnerabilities that may not have been discovered yet.
 
@@ -23,7 +23,7 @@ title: About falco page
 {{< /blocks/content >}}
 
 {{< blocks/content content="html" >}}
-{{< two_column_block_img src="/img/about/what_is_falco.png" alt="what is falco" index="1 md-1 lg-1 xl-1" header="What is Falco" >}}
+{{< two_column_block_img src="/img/about/what_is_falco.svg" alt="what is falco" index="1 md-1 lg-1 xl-1" header="What is Falco" >}}
   Created by Sysdig, Falco was contributed to the Cloud Native Computing Foundation (CNCF) in 2018 and moved to the incubating level in 2020.
 
   At the highest level, you can think of Falco like a network of security cameras for your infrastructure. You deploy Falco across a distributed infrastructure. Falco collects data (from the local machine or by talking to some API), runs a set of rules against it, and notifies you if something bad happens.
@@ -33,7 +33,7 @@ title: About falco page
 {{< /blocks/content >}}
 
 {{< blocks/content content="html" >}}
-{{< two_column_block_img img-aligned="left" src="/img/about/how_it_works.png" alt="how it works" index="1 md-0 lg-0 xl-0" header="How it works" >}}
+{{< two_column_block_img img-aligned="left" src="/img/about/how_it_works.svg" alt="how it works" index="1 md-0 lg-0 xl-0" header="How it works" >}}
   Falco collects event data from a source and compares each event against a set of rules. New data sources can be added to Falco by developing plugins. Some examples of sources for Falco events are:
 
   - System calls
@@ -47,7 +47,7 @@ title: About falco page
 {{< /blocks/content >}}
 
 {{< blocks/content content="html" >}}
-{{< two_column_block_img img-aligned="right" src="/img/about/instrumenting_system_calls.png" alt="Instrumenting system calls" index="1 md-1 lg-1 xl-1" header="Instrumenting system calls" >}}
+{{< two_column_block_img img-aligned="right" src="/img/about/instrumenting_system_calls.svg" alt="Instrumenting system calls" index="1 md-1 lg-1 xl-1" header="Instrumenting system calls" >}}
   There are multiple ways in which Falco can capture an application’s system calls (also referred to as syscalls). The process is performance-critical, and there are two ways in which Falco instruments this: an eBPF probe or a Kernel Module.
 
   eBPF is a revolutionary technology that allows us to run sandboxed programs inside an operating system. eBPF scripts are flexible and safe, and run extremely fast, making them perfect for capturing runtime security. This makes it ideal to instrument system calls for Falco.
@@ -59,7 +59,7 @@ title: About falco page
 {{< /blocks/content >}}
 
 {{< blocks/content content="html" >}}
-{{< two_column_block_img img-aligned="left" src="/img/about/response_to_threats.png" alt="response to threats" index="1 md-0 lg-0 xl-0" header="Response to threats" >}}
+{{< two_column_block_img img-aligned="left" src="/img/about/response_to_threats.svg" alt="response to threats" index="1 md-0 lg-0 xl-0" header="Response to threats" >}}
   With Falco and Falcosidekick, you can forward the suspicious events to your serverless/FaaS systems to trigger actions and answer to threats. It creates a full Response Engine to protect your environments.
 {{< /two_column_block_img >}}
 {{< /blocks/content >}}
