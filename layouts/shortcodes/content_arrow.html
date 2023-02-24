@@ -1,9 +1,22 @@
-{{$direction  := $.Get "direction" | default "forward" }}
+{{$direction := .Get "direction" | default "forward"}}
+{{ $url := .Get "url" | default "#" }}
 <div class="d-flex align-items-center">
+  {{ with eq $direction "back" }}
+  <div class="pr-4">
+    <a href="{{ $url }}" class="btn-link">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+  </div>
+  {{ end }}
   <div class="flex-grow-1">
-    {{ .Inner }}
+    {{ $.Inner | htmlUnescape | safeHTML }}
   </div>
-  <div class="pl-2">
-    <img src="/img/arrow-sm.png" alt="arrow-right" {{ if eq $direction "back" }}class="rotate-180"{{ end }} >
+  {{ with eq $direction "forward" }}
+  <div class="pl-4">
+    <a href="{{ $url }}" class="btn-link">
+      <i class="fa fa-arrow-right"></i>
+    </a>
   </div>
+  {{ end }}
 </div>
+

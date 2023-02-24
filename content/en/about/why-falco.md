@@ -10,7 +10,7 @@ title: Why falco
 <div class="card shadow">
 <div class="card-body">
 <div class="card-text">
-{{< content_arrow direction="forward" >}}
+{{< content_arrow direction="forward" url="#" >}}
 Falco is highly scalable due to its containerized architecture and its compatibility with container orchestration tools like Kubernetes.
 {{< /content_arrow >}}
 </div>
@@ -20,7 +20,7 @@ Falco is highly scalable due to its containerized architecture and its compatibi
 <div class="card shadow mt-3">
 <div class="card-body">
 <div class="card-text">
-{{< content_arrow direction="forward" >}}
+{{< content_arrow direction="forward" url="#" >}}
 Falco runs as a daemon set, ensuring every node in the cluster runs an instance of Falco.
 {{< /content_arrow >}}
 </div>
@@ -30,7 +30,7 @@ Falco runs as a daemon set, ensuring every node in the cluster runs an instance 
 <div class="card shadow mt-3">
 <div class="card-body">
 <div class="card-text">
-{{< content_arrow direction="forward" >}}
+{{< content_arrow direction="forward" url="#" >}}
 Falco leverages Kubernetes and its API to dynamically update its configuration as new pods are added or removed from the cluster.
 {{< /content_arrow >}}
 </div>
@@ -40,7 +40,7 @@ Falco leverages Kubernetes and its API to dynamically update its configuration a
 <div class="card shadow mt-3">
 <div class="card-body">
 <div class="card-text">
-{{< content_arrow direction="forward" >}}
+{{< content_arrow direction="forward" url="#" >}}
 Falco's integration with cloud-native technologies like Prometheus and Grafana provides users with the ability to visualize and analyze Falco alerts at scale.
 {{< /content_arrow >}}
 </div>
