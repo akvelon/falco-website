@@ -103,6 +103,12 @@ body {
   max-width: unset;
   border-radius: $card-border-radius;
 
+  &-sm {
+    .card-body {
+      padding: $card-spacer-x-sm;
+    }
+  }
+
   .card-text {
     :last-child {
       margin-bottom: 0;
