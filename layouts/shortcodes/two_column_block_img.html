@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    {{ $content_type := .Get "content" | default "text" }}
     {{ $index := .Get "index" | default "1 md-1 lg-1 xl-1" }}
     {{ $order := delimit (split $index " ") " order-" }}
     {{ $col1 := .Get "col" | default 5 }}
@@ -10,7 +11,12 @@
     <div class="col-md-{{ $col2 }} col-12 order-0 d-flex flex-column justify-content-center">
       <h3>{{ .Get "header" }}</h3>
       <p>
-        {{ $.Inner | markdownify }}
+        {{ if eq $content_type "text" }}
+          {{ .Inner | markdownify }}
+        {{ end }}
+        {{ if eq $content_type "html" }}
+          {{ .Inner | htmlUnescape | safeHTML }}
+        {{ end }}
       </p>
     </div>
   </div>
