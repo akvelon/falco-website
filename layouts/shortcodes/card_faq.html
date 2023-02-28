@@ -1,5 +1,7 @@
 {{ $index := $.Get "index" }}
-<div class="card faq-card bg-light mb-3">
+{{ $col_id := $.Get "color" | default "light" }} 
+{{ $class := $.Get "class" | default ""}}
+<div class="card faq-card bg-{{ $col_id }} {{ $class }}">
   <div class="card-body">
     {{ with $.Get "title" }}
       <div class="d-flex align-items-center">
