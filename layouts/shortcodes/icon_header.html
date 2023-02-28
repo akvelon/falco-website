@@ -1,11 +1,12 @@
+{{ $classNames := $.Get "classNames"}}
 {{ $order := .Get "index" | default "0" }}
 {{ $header := $.Get "header" }}
 {{ $id := $.Get "id" }}
 {{ $src := $.Get "src" }}
 {{ $alt := $.Get "alt" }}
-<div class="d-flex align-items-center flex-gap-2">
-  <div class="icon-button" order-{{ $order }}>
+<div class="d-flex align-items-center {{ $classNames }}">
+  <div class="icon-button order-{{ $order }} {{ if eq $order 1 }} pr-3 {{ end }}">
     <img src="{{ $src }}" alt="{{ $alt }}">
   </div>
-  <h3 class="pl-3 mb-0" order-0 id="{{ $id }}">{{ $header }}</h3>
+  <h3 class="order-0 mb-0 {{ if ne $order 1 }} pl-3 {{ end }}" id="{{ $id }}">{{ $header }}</h3>
 </div>
