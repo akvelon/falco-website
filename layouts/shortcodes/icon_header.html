@@ -3,9 +3,9 @@
 {{ $id := $.Get "id" }}
 {{ $src := $.Get "src" }}
 {{ $alt := $.Get "alt" }}
-<div class="d-flex align-items-center w-100">
-  <div order-{{ $order }}>
+<div class="d-flex align-items-center flex-gap-2">
+  <div class="icon-button" order-{{ $order }}>
     <img src="{{ $src }}" alt="{{ $alt }}">
   </div>
-  <h3 order-0 id="{{ $id }}">{{ $header }}</h3>
+  <h3 class="pl-3 mb-0" order-0 id="{{ $id }}">{{ $header }}</h3>
 </div>

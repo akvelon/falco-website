@@ -156,45 +156,45 @@ By using Kubernetes annotations, users can define custom metadata that can be us
 {{< /two_column_block_img >}}
 {{< /blocks/content >}}
 
-{{< blocks/content content="text" color="light">}}
-{{< icon_header index=0 header="Policy Language Benefits" src="/img/about/policy_language.svg" alt="policy language benefits" id="policy_language">}}
+{{< blocks/content wrap="col" content="text" color="light">}}
+{{< icon_header index=0 header="Policy Language Benefits" src="/img/about/file-earmark-check-fill.svg" alt="file-earmark-check-fill" id="policy_language">}}
 ##### Ensures Consistency & Reduces Complexity
 
 Falco's rule language is used to define security policies for detecting and alerting on potential threats, and its use across the entire platform ensures a uniform approach to security monitoring. This means that all team members can understand the policies and alerts, regardless of their role or the context in which they are used.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Promotes Collaboration between Security & Ops teams
 
 Since everyone is working with the same set of rules and policies, it becomes easier for these teams to share insights and work together to solve security issues. This can help to reduce the time it takes to identify and resolve security incidents.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Provides Flexibility & Extensibility
 
 The language is designed to be easy to use, and it offers a wide range of operators and conditions that can be used to create customized rules for specific security scenarios. This allows teams to create policies that are tailored to their unique needs and requirements.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Simplifies Compliance & Auditing
 By using the same language to define all security policies and alerts, it becomes easier to demonstrate compliance with regulations and standards. This is because it is easier to track changes to the policies, identify potential security gaps, and show how security incidents were handled. To better understand how Falco can be used for meeting regulatory compliance in cloud-native environments, check out this video.
 
 {{< /blocks/content >}}
 
-{{< blocks/content content="text" color="light">}}
-{{< icon_header index=0 header="Scalability Benefits" src="/img/about/scalability_benefits.svg" alt="scalability benefits" id="scalability_benefits">}}
+{{< blocks/content wrap="col" content="text" color="light">}}
+{{< icon_header index=0 header="Scalability Benefits" src="/img/about/arrows-fullscreen.svg" alt="arrows-fullscreen" id="scalability_benefits">}}
 
 ##### Compatibility with Container Orchestration Tools
 
 We could write something related to easily exporting Falco metrics to Prometheus and Grafana. If there’s not a good example resource in place, we can just link prospective users to the kind page for setting-up a test cluster with Falco, Prometheus and Grafana.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Runs as a Daemonset
 
 Like other workload objects, a DaemonSet manages groups of replicated Pods. However, DaemonSets attempt to adhere to a one-Pod-per-node model, either across the entire cluster or a subset of nodes. As you add nodes to a node pool, DaemonSets automatically add Pods to the new nodes as needed. This enables Falco to monitor all containers on all nodes, providing comprehensive security visibility across the entire cluster. To learn how Falco is used as a DaemonSet, check out the below workshop.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Leverages the Kubernetes API
 
@@ -203,20 +203,20 @@ This allows Falco to automatically scale its monitoring capabilities as the clus
 
 {{< /blocks/content >}}
 
-{{< blocks/content content="text" color="light">}}
-{{< icon_header index=0 header="Performance Benefits" src="/img/about/performance_benefits.svg" alt="performance benefits" id="performance_benefits">}}
+{{< blocks/content wrap="col" content="text" color="light">}}
+{{< icon_header index=0 header="Performance Benefits" src="/img/about/speedometer.svg" alt="speedometer" id="performance_benefits">}}
 
 ##### Uses a minimal set of resources
 
 This enables Falco to operate efficiently without impacting the performance of the monitored applications.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Only monitor the relevant events
 
 By using filters and rules to define which events to monitor, Falco can avoid processing unnecessary data and concentrate on security-related events.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Kernel-level instrumentation to capture system events
 
@@ -224,20 +224,20 @@ This approach also ensures that Falco is highly performant, as it can intercept 
 
 {{< /blocks/content >}}
 
-{{< blocks/content content="text" color="light">}}
-{{< icon_header index=0 header="Custom Deployment Benefits" src="/img/about/custom_deployment_benefits.svg" alt="custom deployment benefits" id="custom_deployment_benefits">}}
+{{< blocks/content wrap="col" content="text" color="light">}}
+{{< icon_header index=0 header="Custom Deployment Benefits" src="/img/about/stack.svg" alt="stack" id="custom_deployment_benefits">}}
 
 ##### Tailor the install process to your specific needs
 
 Users can select which components to install. You can configure specific settings for your needs. And you can even choose the deployment environment, whether it be in Kubernetes, on a bare metal VM, an IoT device or Edge computing. More documentation on install options can be seen here.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Deploy in a “Cloud-Native” way
 
 By installing Falco as a containerized pod within Kubernetes, you are allowing for easier scaling, management, and deployment of those Falco instances.
 
-<hr class="w-100"/><br><br>
+<hr class="w-100"/>
 
 ##### Deploy Additional Components
 
