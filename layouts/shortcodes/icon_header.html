@@ -2,11 +2,11 @@
 {{ $order := .Get "index" | default "0" }}
 {{ $src := $.Get "src" }}
 {{ $alt := $.Get "alt" }}
-<div class="d-flex align-items-center {{ $class }}">
+<div class="d-flex align-items-baseline {{ $class }}">
   {{ with $src }}
   <div class="icon-button order-{{ $order }} {{ if ne $order 1 }} mr-3 {{ end }}">
     <img src="{{ $src }}" alt="{{ $alt }}">
   </div>
   {{ end }}
-  <div class="icon-header-inner">{{ .Inner | markdownify }}</div>
+  {{ .Inner | markdownify }}
 </div>

@@ -157,7 +157,7 @@ By using Kubernetes annotations, users can define custom metadata that can be us
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 src="/img/about/file-earmark-check-fill.svg" alt="file-earmark-check-fill" class="pb-5" >}}
+{{< icon_header index=0 src="/img/about/file-earmark-check-fill.svg" alt="file-earmark-check-fill" class="mb-5" >}}
 ### Policy Language Benefits
 {{< /icon_header >}}
 
@@ -185,7 +185,7 @@ By using the same language to define all security policies and alerts, it become
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 src="/img/about/arrows-fullscreen.svg" alt="arrows-fullscreen" class="pb-5" >}}
+{{< icon_header index=0 src="/img/about/arrows-fullscreen.svg" alt="arrows-fullscreen" class="mb-5" >}}
 ### Scalability Benefits
 {{< /icon_header >}}
 
@@ -209,7 +209,7 @@ This allows Falco to automatically scale its monitoring capabilities as the clus
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 src="/img/about/speedometer.svg" alt="speedometer" class="pb-5" >}}
+{{< icon_header index=0 src="/img/about/speedometer.svg" alt="speedometer" class="mb-5" >}}
 ### Performance Benefits
 {{< /icon_header >}}
 
@@ -232,7 +232,7 @@ This approach also ensures that Falco is highly performant, as it can intercept 
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 src="/img/about/stack.svg" alt="stack" class="pb-5" >}}
+{{< icon_header index=0 src="/img/about/stack.svg" alt="stack" class="mb-5" >}}
 ### Custom Deployment Benefits
 {{< /icon_header >}}
 
