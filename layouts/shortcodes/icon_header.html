@@ -1,12 +1,12 @@
-{{ $classNames := $.Get "classNames"}}
+{{ $class := $.Get "class"}}
 {{ $order := .Get "index" | default "0" }}
-{{ $header := $.Get "header" }}
-{{ $id := $.Get "id" }}
 {{ $src := $.Get "src" }}
 {{ $alt := $.Get "alt" }}
-<div class="d-flex align-items-center {{ $classNames }}">
-  <div class="icon-button order-{{ $order }} {{ if eq $order 1 }} pr-3 {{ end }}">
+<div class="d-flex align-items-center {{ $class }}">
+  {{ with $src }}
+  <div class="icon-button order-{{ $order }} {{ if ne $order 1 }} mr-3 {{ end }}">
     <img src="{{ $src }}" alt="{{ $alt }}">
   </div>
-  <h3 class="order-0 mb-0 {{ if ne $order 1 }} pl-3 {{ end }}" id="{{ $id }}">{{ $header }}</h3>
+  {{ end }}
+  <div class="icon-header-inner">{{ .Inner | markdownify }}</div>
 </div>

@@ -155,6 +155,12 @@ img[src*="#img-fit"] {
   width: 100%;
 }
 
+.icon-header-inner {
+  h3 {
+    margin-bottom: 0 !important;
+  }
+}
+
 // TODO: This overrides hardcoded styles in changelog.scss. Needs to be
 // removed alongside with changelog refactoring
 h1, h2, h3, h4, h5 {

@@ -10,25 +10,25 @@ title: Why falco
 {{< two_column_block_img content="html" src="/img/about/highly_scalable.svg" alt="highly scalable" index="1 md-1 lg-1 xl-1" header="Highly Scalable" >}}
 
 {{< card classNames="card-sm shadow">}}
-{{< content_arrow content="html" direction="forward" url="#scalability_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#scalability-benefits" >}}
 Falco is highly scalable due to its containerized architecture and its compatibility with container orchestration tools like Kubernetes.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#scalability_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#scalability-benefits" >}}
 Falco runs as a daemon set, ensuring every node in the cluster runs an instance of Falco.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#scalability_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#scalability-benefits" >}}
 Falco leverages Kubernetes and its API to dynamically update its configuration as new pods are added or removed from the cluster.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#scalability_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#scalability-benefits" >}}
 Falco's integration with cloud-native technologies like Prometheus and Grafana provides users with the ability to visualize and analyze Falco alerts at scale.
 {{< /content_arrow >}}
 {{< /card >}}
@@ -40,25 +40,25 @@ Falco's integration with cloud-native technologies like Prometheus and Grafana p
 {{< two_column_block_img content="html" src="/img/about/highly_perfomant.svg" alt="highly performant" index="1 md-0 lg-0 xl-0" header="Highly Performant" >}}
 
 {{< card classNames="card-sm shadow">}}
-{{< content_arrow content="html" direction="forward" url="#performance_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#performance-benefits" >}}
 Falco is highly performant due to its low overhead, event-driven architecture, and the ability to leverage kernel-level instrumentation to capture system events.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#performance_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#performance-benefits" >}}
 Falco's low overhead is achieved by using a minimal set of resources, including CPU, memory, and I/O, while monitoring system events.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#performance_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#performance-benefits" >}}
 Falco's event-driven architecture allows it to monitor only the relevant events, reducing the amount of noise generated and increasing its efficiency.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#performance_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#performance-benefits" >}}
 Falco uses kernel-level instrumentation to capture system events, which provides a low-level view of the system and enables it to detect a wide range of security issues.
 {{< /content_arrow >}}
 {{< /card >}}
@@ -70,25 +70,25 @@ Falco uses kernel-level instrumentation to capture system events, which provides
 {{< two_column_block_img content="html" src="/img/about/single_policy.svg" alt="single policy language" index="1 md-1 lg-1 xl-1" header="Single Policy Language" >}}
 
 {{< card classNames="card-sm shadow">}}
-{{< content_arrow content="html" direction="forward" url="#policy_language" >}}
+{{< content_arrow content="html" direction="forward" url="#policy-language-benefits" >}}
 A single policy language ensures consistency and reduces complexity.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#policy_language" >}}
+{{< content_arrow content="html" direction="forward" url="#policy-language-benefits" >}}
 A single policy language promotes collaboration between security and operations teams.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#policy_language" >}}
+{{< content_arrow content="html" direction="forward" url="#policy-language-benefits" >}}
 Falco's single policy language provides flexibility and extensibility.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#policy_language" >}}
+{{< content_arrow content="html" direction="forward" url="#policy-language-benefits" >}}
 A single policy language simplifies compliance and auditing.
 {{< /content_arrow >}}
 {{< /card >}}
@@ -100,25 +100,25 @@ A single policy language simplifies compliance and auditing.
 {{< two_column_block_img content="html" src="/img/about/custom_deployment.svg" alt="custom deployment options" index="1 md-0 lg-0 xl-0" header="Custom Deployment Options" >}}
 
 {{< card classNames="card-sm shadow">}}
-{{< content_arrow content="html" direction="forward" url="#custom_deployment_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#custom-deployment-benefits" >}}
 Custom install options allow users to tailor the install process to their specific needs.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#custom_deployment_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#custom-deployment-benefits" >}}
 When deploying Falco in a Cloud-Native way, it is typically installed as a containerized application using a container orchestration tool such as Kubernetes.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#custom_deployment_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#custom-deployment-benefits" >}}
 The installation can include deploying additional components, such as Prometheus or Grafana.
 {{< /content_arrow >}}
 {{< /card >}}
 
 {{< card classNames="card-sm shadow mt-2">}}
-{{< content_arrow content="html" direction="forward" url="#custom_deployment_benefits" >}}
+{{< content_arrow content="html" direction="forward" url="#custom-deployment-benefits" >}}
 An optional eBPF probe improves the performance, maintainability, and user experience. Now delivered as a unique, powerful, self-contained Falco executable.
 {{< /content_arrow >}}
 {{< /card >}}
@@ -157,7 +157,10 @@ By using Kubernetes annotations, users can define custom metadata that can be us
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 header="Policy Language Benefits" src="/img/about/file-earmark-check-fill.svg" alt="file-earmark-check-fill" id="policy_language" classNames="pb-5" >}}
+{{< icon_header index=0 src="/img/about/file-earmark-check-fill.svg" alt="file-earmark-check-fill" class="pb-5" >}}
+### Policy Language Benefits
+{{< /icon_header >}}
+
 ##### Ensures Consistency & Reduces Complexity
 
 Falco's rule language is used to define security policies for detecting and alerting on potential threats, and its use across the entire platform ensures a uniform approach to security monitoring. This means that all team members can understand the policies and alerts, regardless of their role or the context in which they are used.
@@ -182,7 +185,9 @@ By using the same language to define all security policies and alerts, it become
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 header="Scalability Benefits" src="/img/about/arrows-fullscreen.svg" alt="arrows-fullscreen" id="scalability_benefits" classNames="pb-5" >}}
+{{< icon_header index=0 src="/img/about/arrows-fullscreen.svg" alt="arrows-fullscreen" class="pb-5" >}}
+### Scalability Benefits
+{{< /icon_header >}}
 
 ##### Compatibility with Container Orchestration Tools
 
@@ -204,7 +209,9 @@ This allows Falco to automatically scale its monitoring capabilities as the clus
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 header="Performance Benefits" src="/img/about/speedometer.svg" alt="speedometer" id="performance_benefits" classNames="pb-5" >}}
+{{< icon_header index=0 src="/img/about/speedometer.svg" alt="speedometer" class="pb-5" >}}
+### Performance Benefits
+{{< /icon_header >}}
 
 ##### Uses a minimal set of resources
 
@@ -225,7 +232,9 @@ This approach also ensures that Falco is highly performant, as it can intercept 
 {{< /blocks/content >}}
 
 {{< blocks/content wrap="col" content="text" color="light">}}
-{{< icon_header index=0 header="Custom Deployment Benefits" src="/img/about/stack.svg" alt="stack" id="custom_deployment_benefits" classNames="pb-5" >}}
+{{< icon_header index=0 src="/img/about/stack.svg" alt="stack" class="pb-5" >}}
+### Custom Deployment Benefits
+{{< /icon_header >}}
 
 ##### Tailor the install process to your specific needs
 
