@@ -70,7 +70,7 @@ Falco uses eBPF or kernel modules capturing system and application behavior and 
 {{< two_column_block_img content="html" src="/img/about/single_policy.svg" alt="single policy language" index="1 md-1 lg-1 xl-1" header="Single Policy Language" >}}
 
 {{< card classNames="card-sm shadow">}}
-{{< content_arrow content="html" direction="forward" url="#ensures-consistency-reduces-complexity" >}}
+{{< content_arrow content="html" direction="forward" url="#ensures-consistency-and-reduces-complexity" >}}
 Falco's policy language is all you need to know: reducing complexity and misconfigurations.
 {{< /content_arrow >}}
 {{< /card >}}
@@ -161,7 +161,7 @@ Define custom metadata to enrich Falco alerts with context specific to your need
 ### Policy Language Benefits
 {{< /icon_header >}}
 
-##### Ensures Consistency & Reduces Complexity
+##### Ensures Consistency and Reduces Complexity
 
 Falco's rule language is used to define security policies for detecting and alerting on potential threats, and its use across the entire platform ensures a uniform approach to security monitoring. This means that all team members can understand the policies and alerts, regardless of their role or the context in which they are used.
 
@@ -226,7 +226,7 @@ Falco's high performance is due to several factors, including its low overhead, 
 
 ##### Uses a minimal set of resources
 
-Falco is designed to use a minimal set of resources, such as CPU and memory, while still providing effective monitoring and detection capabilities. By using a minimal set of resources, Falco operates efficiently and does not impact the performance of the monitored applications, ensuring that the applications can continue to function smoothly without any degradation in performance.
+Falco is designed to use a minimal set of resources, such as CPU and memory, while still providing effective monitoring and detection capabilities. By using a minimal set of resources, Falco operates efficiently and does not impact the performance of the monitored applications, ensuring that the applications can continue to function smoothly without any degradation in performance.This makes Falco an ideal choice for monitoring Kubernetes clusters where resource utilization is critical and any performance degradation can have significant consequences.
 
 <hr class="w-100 my-4"/>
 
@@ -296,7 +296,7 @@ Configuring custom Falco alerts can benefit security by allowing organizations t
 
 ##### Enrich alerts with custom metadata context
 
-Defining custom metadata can benefit security by enriching Falco alerts with context specific to an organization's needs. Custom metadata can provide additional information about the alert, such as user information or application details, enabling faster investigation and response times. It can also help organizations comply with regulatory requirements or internal security policies
+Defining custom metadata can benefit security by enriching Falco alerts with context specific to an organization's needs. Custom metadata can provide additional information about the alert, such as user information or application details, enabling faster investigation and response times. It can also help organizations comply with regulatory requirements or internal security policies.
 
 {{< /blocks/content >}}
 
