@@ -23,7 +23,7 @@ title: Falco Ecosystem
   {{< /blocks/grid >}}
 
   <!-- {{< blocks/grid layout="lg-4 md-3 sm-2 2" gap=5 class="gallery-vendor">}}
-    {{< vendor_gallery_item plugins />}}
+    {{< vendor_gallery_items plugins />}}
     <div class="d-flex flex-column align-items-center">
       <a class="icon-button shadow" href="https://github.com/falcosecurity/plugins#registered-plugins">
         <img src="/img/icons/box-arrow-up-right.svg"/>
@@ -41,7 +41,7 @@ title: Falco Ecosystem
   <p class="-text-700 mt-4 mb-5">Track your applications and containers’ behaviors by collecting their communications with the kernel thanks to eBPF. Falco detects out of the box the context and can enrich all events with metadata from the docker engine.</p>
   
   {{< blocks/grid layout="lg-4 md-3 sm-2 2" gap=5 class="gallery-vendor">}}
-  {{< vendor_gallery_item integrations />}}
+  {{< vendor_gallery_items integrations />}}
     <div class="d-flex flex-column align-items-center">
       <a class="icon-button shadow" href="https://github.com/falcosecurity/falcosidekick#outputs">
         <img src="/img/icons/box-arrow-up-right.svg"/>
@@ -64,7 +64,7 @@ title: Falco Ecosystem
   <p class="-text-700 mt-4 mb-5">Track your applications and containers’ behaviors by collecting their communications with the kernel thanks to eBPF. Falco detects out of the box the context and can enrich all events with metadata from the docker engine.</p>
 
   {{< blocks/grid layout="lg-4 md-3 sm-2 2" gap=5 class="gallery-vendor">}}
-    {{< vendor_gallery_item vendors />}}
+    {{< vendor_gallery_items vendors />}}
   {{< /blocks/grid >}}
 
   <div class="text-center mt-5">
