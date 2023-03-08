@@ -4,13 +4,9 @@
   {{ range sort $collection "weight" }}
     <div class="text-center">
       <figure>
-        {{ if .url }}
-          <a href="{{ .url }}">
-            <img class="img-fluid icon-vendor" src="{{ printf "/img/adopters/%s" .src | relURL }}" alt="{{ .alt }}" loading="lazy" >
-          </a>
-        {{ else }}
+        <a href="{{ .url }}">
           <img class="img-fluid icon-vendor" src="{{ printf "/img/adopters/%s" .src | relURL }}" alt="{{ .alt }}" loading="lazy" >
-        {{ end }}
+        </a>
       </figure>
       {{ if .description }}
         <div class="mt-4 font-weight-bold">{{ .description }}</div>
