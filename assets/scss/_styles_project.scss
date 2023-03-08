@@ -7,6 +7,7 @@ footer {
 @import "training";
 @import "base";
 @import "version_banner";
+@import "utilities";
 
 // Mixins
 @import "mixins/grid";
@@ -58,11 +59,8 @@ main {
   p,
   li {
     font-size: 1.25rem;
+    color: $dark;
   }
-}
-
-body {
-  color: $dark;
 }
 
 a {

@@ -111,8 +111,8 @@ title: Falco Ecosystem
 
 {{< blocks/content content="html" wrap="col" >}}
 {{< footer_nav 
-  prev="/about/mitre"
-  prevTitle="MITRE ATT&CK Framework"
+  prev="/about/use-cases"
+  prevTitle="Falco use cases"
   next="/about/faq" 
   nextTitle="Frequently Asked Questions" 
 >}}
