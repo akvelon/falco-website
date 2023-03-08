@@ -1,0 +1,4 @@
+src: okta.png
+alt: Okta
+description: Collect Okta Audit logs
+weight: 60
