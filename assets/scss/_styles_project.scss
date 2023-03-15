@@ -19,6 +19,7 @@ footer {
 @import "card";
 @import "type";
 @import "tables";
+@import "pagination";
 
 .icon {
   padding: 1rem;
@@ -71,6 +72,10 @@ a {
 
 img[src*="#img-fit"] {
   width: 100%;
+}
+
+img[src*="#img-fit"] {
+  object-fit: contain;
 }
 
 #documentation {
