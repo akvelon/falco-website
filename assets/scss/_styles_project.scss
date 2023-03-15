@@ -89,3 +89,38 @@ img[src*="#img-fit"] {
     font-size: $h6-font-size;
   }
 }
+
+.eclipse {
+  $width: 50rem;
+  $height: 50rem;
+
+  &__layout {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -9999;
+    top: 0;
+  }
+
+  position: absolute;
+  height: $height;
+  width: $width;
+  background: linear-gradient(180deg, rgba(3, 180, 200, 0) 0%, $primary 100%);
+  opacity: 0.3;
+  filter: blur(100px);
+  z-index: -9999;
+
+  &-top {
+    top: 85rem;
+    left: -20rem;
+  }
+
+  &-bottom {
+    top: 175rem;
+    right: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
