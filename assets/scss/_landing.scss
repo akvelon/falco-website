@@ -1,7 +1,7 @@
 .video-responsive {
   height: 20rem;
-  
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(md) {
     width: 16.5rem;
     height: 16.5rem;
   }
