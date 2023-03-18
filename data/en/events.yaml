@@ -1,0 +1,18 @@
+- title: Test event 1
+  date: 2022-03-03
+  location: Amsterdam
+  description: Test event
+  url: 
+  schedule: 
+    - start:
+      end:
+      title:
+- title: Test event 2
+  date: 2022-04-04
+  location: Amsterdam
+  description: Test event
+  url: 
+  schedule: 
+    - start:
+      end:
+      title:
