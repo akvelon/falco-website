@@ -93,44 +93,21 @@
   </div>
 </section>  */}}
 
-<!-- Featured -->
+<!-- Community -->
 <section class="row">
   <div class="container">
     <div class="row">
-      <div class="col-lg-7 mt-4 pt-2 d-flex flex-column justify-content-between">
+      <div class="col-lg-7 mt-4 pt-2 d-flex flex-column">
         <div class="d-flex justify-content-between pb-3">
           <h4 class="mb-0">Featured videos</h4>
           <a href="https://www.youtube.com/@falcosecurity" target="_blank" role="button" class="btn btn-lg btn-outline-primary">
             {{ T "learn_more_btn" | markdownify }}
           </a>
         </div>
-        <div class="d-flex flex-column flex-md-row pt-3">
-          <iframe class="rounded-lg" width="264" height="264" src="https://www.youtube.com/embed/u409G5PsO1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <div class="ml-4">
-            <div class="text-muted mb-2">Jan 18, 2023</div>
-            <h6 class="mb-2">Cloud Native Security Hub</h6>
-            <p>However rare side effects observed among children can be metabolic acidosis, coma, respiratory depression. Earlier in this series, we have seen how to use Argo, Tekton, and Knative to trigger a resource after getting input from Falcoside...</p>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row pt-4">
-          <iframe class="rounded-lg" width="264" height="264" src="https://www.youtube.com/embed/rBqBrYESryY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <div class="ml-4">
-            <div class="text-muted mb-2">Jan 18, 2023</div>
-            <h6 class="mb-2">Kubernetes Response Engine, Part 7: Falcosidekick + Cloud Functions</h6>
-            <p>However rare side effects observed among children can be metabolic acidosis, coma, respiratory depression. Earlier in this series, we have seen how to use Argo, Tekton, and Knative to trigger a resource after getting input from Falcoside...</p>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row pt-4">
-          <iframe class="rounded-lg" width="264" height="264" src="https://www.youtube.com/embed/zgRFN3o7nJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <div class="ml-4">
-            <div class="text-muted mb-2">Jan 18, 2023</div>
-            <h6 class="mb-2">Kubernetes Response Engine, Part 7: Falcosidekick + Cloud Functions</h6>
-            <p>However rare side effects observed among children can be metabolic acidosis, coma, respiratory depression. </p>
-          </div>
-        </div>
-      </div>
+        <div class="d-flex flex-column gap-4">{{ partial "landing/videos.html" }}</div>
+      </div>  
       <div class="col-lg-5 d-flex flex-column justify-content-between">
-        <div class="card card-rounded mt-4 mt-lg-0">
+        <div class="card mt-4 mt-lg-0 shadow">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h4 class="mt-0 pb-1">News</h4>
@@ -147,7 +124,7 @@
             <p class="card-text">Earlier in this series, we have seen how to use Argo, Tekton, and Knative to trigger a resource Falco is the first runtime security project to join...</p>
           </div>
         </div>
-        <div class="card card-rounded mt-4">
+        <div class="card mt-4 shadow">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h4 class="mt-0 pb-1">Events</h4>
