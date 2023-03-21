@@ -1,0 +1,20 @@
+- title:  Falcoctl - Easy management of the lifecycle of your rules and plugins for Falco
+  url: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinarfalcoctl-easy-management-of-the-lifecycle-of-your-rules-plugins-for-falco/
+  date: 2023-03-23
+  img: /img/community/runtime_security_1.svg
+  duration: 45
+  type: Webcast
+- title:  Up & Running with Runtime Security
+  url: https://www.aicamp.ai/event/eventdetails/W2023033010?utm_source=falco20230330
+  date: 2023-03-30
+  img: /img/community/runtime_security_2.svg
+  duration: 120
+  type: WORKSHOP
+- title:  Up & Running with Runtime Security (KubeCon EU, Amsterdam)
+  url: https://upandrunning.eventbrite.com
+  date: 2023-04-18
+  img: /img/community/runtime_security_3.svg
+  duration: 120
+  type: WORKSHOP
+  
+  

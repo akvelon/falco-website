@@ -1,0 +1,23 @@
+{{ $events := where (index site.Data site.Language.Lang).register "date" ">=" (now.Format "2006-01-02") }}
+{{ $sorted := sort $events "date" }}
+
+<div class="row">
+  {{ range $item := first 3 $sorted }}
+    <a href="{{ .url }}" class="col-12 col-lg-4 d-flex text-decoration-none font-weight-normal mt-4 mt-lg-0">
+      <div class="card btn btn-light p-0 shadow mt-2 flex-grow-1">
+        <img class="card-img-top" src="{{ .img }}" alt="{{ .title }}">
+        <div class="card-body d-flex flex-column align-content-start">
+          <div class="d-flex justify-content-between">
+            <div class="text-left">
+              <span>{{ time.Format "Jan 2, 2006" .date }}</span>
+              <span> {{ .type }}</span>
+            </div>
+            <div>{{ .duration }} min</div>
+          </div>
+          <h5 class="text-left mt-4 flex-grow-1">{{ .title }}</h5>
+          <h6 class="font-weight-bold text-primary text-left mt-4">Register</h6>
+        </div>
+      </div>
+    </a>
+  {{ end }}
+</div>

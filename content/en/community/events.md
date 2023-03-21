@@ -51,12 +51,21 @@ title: Falco Events
 
 {{< /blocks/content >}}
 
-{{< blocks/content content="html" >}}
-<h3>See you in person</h3>
+{{< blocks/content content="html" wrap="col" >}}
 
-<h4 class="text-primary">KubeCon EU — Amsterdam, here we come!</h3>
+<h3>See you in person</h3>
+<h4 class="text-primary mb-0">KubeCon EU — Amsterdam, here we come!</h4>
 
 {{< comminuty/events >}}
 
 {{< /blocks/content >}}
 
+{{< blocks/content content="html" wrap="col" >}}
+
+<h3>Join us for webcasts, livestreams and workshops</h3>
+
+<h5 class="font-weight-normal">Learn more about the security landscape and Falco! Register below</h3>
+
+{{< comminuty/register >}}
+
+{{< /blocks/content >}}
