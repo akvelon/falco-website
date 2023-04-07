@@ -1,18 +1,24 @@
+
+{{ with .shareStory }}
+<div class="card testimonial-card bg-transparent card-rounded card-rounded--shaded h-100 mr-1">
+  <div class="card-body d-flex flex-column align-items-start py-5">
+    <div class="testimonial-card__icon bg-info rounded-circle d-flex justify-content-center align-items-center p-3">
+      <img class="bg-info" src="/img/icons/question-lg.svg"></img>
+    </div>
+    <h3 class="flex-grow-1 mt-4 font-weight-normal">Your logo could be here</h3>
+    <a class="btn btn-primary btn-lg" role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeUeha4P3VxqBd-AvNuEybNdc2DzQQyAInyceAqgqoXLy8Ptw/viewform?usp=sf_link" target="_blank">Share you story</a>
+  </div>
+</div>
+{{ else }}
 <div class="card card-rounded card-rounded--shaded h-100">
   <div class="card-body d-flex flex-column justify-content-between">
-    {{ with .shareStory }}
-      <img class="quote-slide__logo" src="{{ $.logoUrl }}" alt="Quote Logo" />
-      <h3 class="display-3 font-weight-normal card-text mb-0 mt-4 flex-grow-1">{{ $.text | markdownify }}</h3>
-      <a href="#" role="button" class="btn btn-primary d-block">
-        {{ T "share_your_story_btn" | markdownify }}
-      </a>
-    {{ else }}
       <img class="quote-slide__logo" src="{{ .logoUrl }}" alt="Quote Logo" />
       <p class="card-text mb-0 mt-4 flex-grow-1">"{{ .text | markdownify }}"</p>
       <div class="d-flex mt-4">
+        {{ $source := .authorImgUrl | default "/img/default_author.png" }}
         <img
           class="rounded quote-slide__avatar"
-          src="{{ .authorImgUrl }}"
+          src="{{ $source }}"
           alt="author image"
         />
         <div class="pl-3 d-flex flex-column justify-content-center">
@@ -20,6 +26,6 @@
           <span class="text-black-50"> {{ .authorPosition }} </span>
         </div>
       </div>
-    {{ end }}
   </div>
 </div>
+{{ end }}

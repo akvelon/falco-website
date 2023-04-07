@@ -16,4 +16,5 @@ Please follow these steps to add your case-study to [Falco endusers](https://fal
   authorName: Author Name
   authorPosition: Author Position
 ```
-5. Create pull request to the Falco repository with your changes
+5. Text field with description should consist of ~220 symbols
+6. Create pull request to the Falco repository with your changes

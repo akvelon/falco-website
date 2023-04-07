@@ -87,17 +87,9 @@ title: Falco Ecosystem
   {{< tab name="End-users" >}}
   <p class="mt-4 mb-5">Falco elevates threat detection and response in companies and organizations around the world.</p>
 
-  {{< blocks/grid layout="lg-3 md-2 sm-1 1" gap=2 >}}
-    <div class="card testimonial-card bg-transparent">
-      <div class="card-body d-flex flex-column align-items-start py-5">
-        <div class="testimonial-card__icon bg-info rounded-circle d-flex justify-content-center align-items-center p-3">
-          <img class="bg-info" src="/img/icons/question-lg.svg"></img>
-        </div>
-        <h3 class="flex-grow-1 mt-4 font-weight-normal">Your logo could be here</h3>
-        <a class="btn btn-primary btn-lg" role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeUeha4P3VxqBd-AvNuEybNdc2DzQQyAInyceAqgqoXLy8Ptw/viewform?usp=sf_link" target="_blank">Share you story</a>
-      </div>
-    </div>
-  {{< /blocks/grid >}}
+  {{< blocks/content wrap="col" content="html" >}}
+    {{< slider >}}
+  {{< /blocks/content >}}
 
   <h3 class="mt-5">Also used by</h3>
 
